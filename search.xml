@@ -47,17 +47,6 @@
     
     
     <entry>
-      <title>关于我</title>
-      <link href="/about/index.html"/>
-      <url>/about/index.html</url>
-      
-        <content type="html"><![CDATA[<h1 id="你们好！我叫shuomc"><a href="#你们好！我叫shuomc" class="headerlink" title="你们好！我叫shuomc"></a>你们好！我叫shuomc</h1><p><del>也可以叫我vsjun</del></p><p>​    本人目前为大一新生，热爱计算机，也喜欢编程，你现在看到的网页是我花了三天时间自学hexo搭建、美化并且加装了一系列插件完成的，后续还会跟进网站的拓展以及建设。</p><h2 id="建立目的"><a href="#建立目的" class="headerlink" title="建立目的"></a>建立目的</h2><p>​    小站的建立是为了能更好地学习计算机相关内容，<del>也想勾搭一些大佬</del>。本人在大学前并没有接触过计算机语言，但一直有浓厚的兴趣，目前为C语言初学者。小站将会更新C语言学习、网站搭建相关的文章以及其它干货经验分享。</p><h2 id="未来"><a href="#未来" class="headerlink" title="未来"></a>未来</h2><p>​    其实我挺喜欢游戏开发，不过我可能做不了技术美术的活，希望能成为优秀的游戏程序员</p><p>​    <strong><del>目标加入UBISOFT</del></strong></p><h2 id="联系我"><a href="#联系我" class="headerlink" title="联系我"></a>联系我</h2><p><strong>QQ：1164659757</strong></p><p><strong>微信：ubivsj2014</strong></p><p><strong>B站UID：45489115</strong></p><p><strong>github：<a href="https://github.com/shuomc">https://github.com/shuomc</a></strong></p><h2 id="本站链接"><a href="#本站链接" class="headerlink" title="本站链接"></a>本站链接</h2><blockquote><p><strong><a href="https://si.shuomc.buzz/">shuomc的博客 - 分享生活, 记录学习</a></strong></p></blockquote><p>如果你觉得我的文章不错，可以分享给身边的朋友，也希望有大佬能指出我的不足，欢迎交换友链！！！</p>]]></content>
-      
-    </entry>
-    
-    
-    
-    <entry>
       <title>分类</title>
       <link href="/categories/index.html"/>
       <url>/categories/index.html</url>
@@ -69,11 +58,11 @@
     
     
     <entry>
-      <title>朋友们</title>
-      <link href="/friends/index.html"/>
-      <url>/friends/index.html</url>
+      <title>关于我</title>
+      <link href="/about/index.html"/>
+      <url>/about/index.html</url>
       
-        <content type="html"><![CDATA[]]></content>
+        <content type="html"><![CDATA[<h1 id="你们好！我叫shuomc"><a href="#你们好！我叫shuomc" class="headerlink" title="你们好！我叫shuomc"></a>你们好！我叫shuomc</h1><p><del>也可以叫我vsjun</del></p><p>​    本人目前为大一新生，热爱计算机，也喜欢编程，你现在看到的网页是我花了三天时间自学hexo搭建、美化并且加装了一系列插件完成的，后续还会跟进网站的拓展以及建设。</p><h2 id="建立目的"><a href="#建立目的" class="headerlink" title="建立目的"></a>建立目的</h2><p>​    小站的建立是为了能更好地学习计算机相关内容，<del>也想勾搭一些大佬</del>。本人在大学前并没有接触过计算机语言，但一直有浓厚的兴趣，目前为C语言初学者。小站将会更新C语言学习、网站搭建相关的文章以及其它干货经验分享。</p><h2 id="未来"><a href="#未来" class="headerlink" title="未来"></a>未来</h2><p>​    其实我挺喜欢游戏开发，不过我可能做不了技术美术的活，希望能成为优秀的游戏程序员</p><p>​    <strong><del>目标加入UBISOFT</del></strong></p><h2 id="联系我"><a href="#联系我" class="headerlink" title="联系我"></a>联系我</h2><p><strong>QQ：1164659757</strong></p><p><strong>微信：ubivsj2014</strong></p><p><strong>B站UID：45489115</strong></p><p><strong>github：<a href="https://github.com/shuomc">https://github.com/shuomc</a></strong></p><h2 id="本站链接"><a href="#本站链接" class="headerlink" title="本站链接"></a>本站链接</h2><blockquote><p><strong><a href="https://si.shuomc.buzz/">shuomc的博客 - 分享生活, 记录学习</a></strong></p></blockquote><p>如果你觉得我的文章不错，可以分享给身边的朋友，也希望有大佬能指出我的不足，欢迎交换友链！！！</p>]]></content>
       
     </entry>
     
@@ -91,9 +80,9 @@
     
     
     <entry>
-      <title>标签</title>
-      <link href="/tags/index.html"/>
-      <url>/tags/index.html</url>
+      <title>朋友们</title>
+      <link href="/friends/index.html"/>
+      <url>/friends/index.html</url>
       
         <content type="html"><![CDATA[]]></content>
       
@@ -105,6 +94,17 @@
       <title>随便逛逛</title>
       <link href="/link/index.html"/>
       <url>/link/index.html</url>
+      
+        <content type="html"><![CDATA[]]></content>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>标签</title>
+      <link href="/tags/index.html"/>
+      <url>/tags/index.html</url>
       
         <content type="html"><![CDATA[]]></content>
       
