@@ -47,9 +47,9 @@
     
     
     <entry>
-      <title>关于我</title>
-      <link href="/about/index.html"/>
-      <url>/about/index.html</url>
+      <title>朋友们</title>
+      <link href="/friends/index.html"/>
+      <url>/friends/index.html</url>
       
         <content type="html"><![CDATA[]]></content>
       
@@ -69,6 +69,17 @@
     
     
     <entry>
+      <title>随便逛逛</title>
+      <link href="/link/index.html"/>
+      <url>/link/index.html</url>
+      
+        <content type="html"><![CDATA[]]></content>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title></title>
       <link href="/css/custm.css"/>
       <url>/css/custm.css</url>
@@ -80,20 +91,9 @@
     
     
     <entry>
-      <title>朋友们</title>
-      <link href="/friends/index.html"/>
-      <url>/friends/index.html</url>
-      
-        <content type="html"><![CDATA[]]></content>
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title>随便逛逛</title>
-      <link href="/link/index.html"/>
-      <url>/link/index.html</url>
+      <title>关于我</title>
+      <link href="/about/index.html"/>
+      <url>/about/index.html</url>
       
         <content type="html"><![CDATA[]]></content>
       
