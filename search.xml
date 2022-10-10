@@ -4,6 +4,33 @@
   
     
     <entry>
+      <title>ACM迎新题随笔</title>
+      <link href="/posts/3d84f0.html"/>
+      <url>/posts/3d84f0.html</url>
+      
+        <content type="html"><![CDATA[<h1 id="初遇ACM题"><a href="#初遇ACM题" class="headerlink" title="初遇ACM题"></a>初遇ACM题</h1><ul><li><h2 id="题目简介"><a href="#题目简介" class="headerlink" title="题目简介"></a>题目简介</h2><ul><li><h3 id="猜比分"><a href="#猜比分" class="headerlink" title="猜比分"></a>猜比分</h3><p>给定一组比分  如：*<del>114514 : 191981</del>*</p><p>让N个人来猜比分</p><p>第1个人编号为1</p><p>第2个人编号为2</p><p>……</p><p>第N个人编号为N</p><p>找出猜出比分最接近真实比分的<strong>编号</strong></p></li><li><h3 id="Input"><a href="#Input" class="headerlink" title="Input"></a>Input</h3><p>每行包含两个整数 以空格分开（范围都在[0~999999]内）<br>第一行两个整数是CC PJ 的最终比分<br>从第二行开始的若干行 </p><p>分别是</p><p>第1位同学的竞猜结果 </p><p>第2位同学的竞猜结果</p><p>……</p><p>第N位同学的竞猜结果</p><p>以-1 -1结束输入</p></li><li><h3 id="Output"><a href="#Output" class="headerlink" title="Output"></a>Output</h3><p>一个整数 表示的是竞猜比分最接近真实结果的同学的编号</p></li><li><h3 id="Sample-Input"><a href="#Sample-Input" class="headerlink" title="Sample Input"></a>Sample Input</h3><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br></pre></td><td class="code"><pre><span class="line">1328 1158</span><br><span class="line">500 700</span><br><span class="line">36 38</span><br><span class="line">423 450</span><br><span class="line">100 80</span><br><span class="line">380 80</span><br><span class="line">550 450</span><br><span class="line">735 735</span><br><span class="line">520 680</span><br><span class="line">390 170</span><br><span class="line">1800 800</span><br><span class="line">16 61</span><br><span class="line">61 16</span><br><span class="line">50 48</span><br><span class="line">66 60</span><br><span class="line">800 200</span><br><span class="line">43 29</span><br><span class="line">400 600</span><br><span class="line">900 800</span><br><span class="line">98 98</span><br><span class="line">401 451</span><br><span class="line">350 500</span><br><span class="line">173 184</span><br><span class="line">576 486</span><br><span class="line">113 255</span><br><span class="line">300 275</span><br><span class="line">666 545</span><br><span class="line">275 194</span><br><span class="line">361 258</span><br><span class="line">66 63</span><br><span class="line">98 138</span><br><span class="line">272 243</span><br><span class="line">500 500</span><br><span class="line">257 76</span><br><span class="line">927 826</span><br><span class="line">600 560</span><br><span class="line">100 150</span><br><span class="line">2246 1748</span><br><span class="line">350 300</span><br><span class="line">23 30</span><br><span class="line">300 200</span><br><span class="line">369 396</span><br><span class="line">300 500</span><br><span class="line">436 327</span><br><span class="line">970 630</span><br><span class="line">400 550</span><br><span class="line">400 500</span><br><span class="line">400 500</span><br><span class="line">1000 600</span><br><span class="line">555 333</span><br><span class="line">350 300</span><br><span class="line">2028 1197</span><br><span class="line">777 456</span><br><span class="line">-1 -1</span><br><span class="line"></span><br></pre></td></tr></table></figure></li><li><h3 id="Sample-Output"><a href="#Sample-Output" class="headerlink" title="Sample Output"></a>Sample Output</h3><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">34</span><br></pre></td></tr></table></figure></li></ul></li><li><h2 id="急功近利"><a href="#急功近利" class="headerlink" title="急功近利"></a>急功近利</h2><p>​    首先，这道题并不复杂，甚至可以用简单来形容，基本上是没有什么算法的，只有单纯的选择、赋值与记录，作为一名C语言初学者，相比于平时的练习题，冗长复杂的题目介绍以及输入数据让我开头就上了心态（因为也是班上前几的排名所以比较着急）。也可能是沉迷于网站搭建，脑子里早就把当初对C的理解、逻辑抛在脑后，剩下的就只有焦虑和惊慌失措，写的循环乱七八糟，有些条件甚至是互斥的（真不知道当时脑子是怎么想的），错误…….死循环……</p><p><del><em>以为需要排序算法还去看了算法</em></del><em><del>的屑</del></em></p><p>换了三种方案，很遗憾都是<strong>Wrong Answer</strong></p></li><li><h2 id="开摆"><a href="#开摆" class="headerlink" title="开摆"></a>开摆</h2><p>放弃了，继续美化博客和网上冲浪</p></li><li><h2 id="梦醒时分"><a href="#梦醒时分" class="headerlink" title="梦醒时分"></a>梦醒时分</h2><p>大早上起来军训，站在体育场上被寒风刮被细雨打，一瞬间我理解了<strong>宮本浩次</strong></p><ul><li><h3 id="冬の花"><a href="#冬の花" class="headerlink" title="冬の花"></a>冬の花</h3><p><del>事被撅了罢</del></p><p>其实只需要将比分赋值为a,b;循环扫描猜想比分m,n;</p><p>编号++</p><p>再将之做差</p><p>将所得差寄存</p><p>如果后续的差小于此时差，则被替换为后续差（差越小表示越接近）</p><p>同时在定义一个变量将编号寄存</p><p>重复循环至结束</p></li></ul></li><li><h2 id="Code"><a href="#Code" class="headerlink" title="Code"></a>Code</h2><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;bits/stdc++.h&gt;</span></span></span><br><span class="line"><span class="type">int</span> <span class="title function_">main</span><span class="params">()</span></span><br><span class="line">&#123;</span><br><span class="line"><span class="type">int</span> a,b; <span class="comment">//正确比分 </span></span><br><span class="line"><span class="type">int</span> m,n; <span class="comment">//每组猜想比分 </span></span><br><span class="line"><span class="type">int</span> c,d; <span class="comment">//差 </span></span><br><span class="line"><span class="type">int</span> num=<span class="number">0</span>,truth; <span class="comment">//编号以及记录编号 </span></span><br><span class="line"><span class="type">int</span> x=<span class="number">999999</span>,y=<span class="number">999999</span>; <span class="comment">//记录最小的差 </span></span><br><span class="line"></span><br><span class="line"><span class="built_in">scanf</span>(<span class="string">&quot;%d%d&quot;</span>,&amp;a,&amp;b); <span class="comment">//第一组数据 正确比分 </span></span><br><span class="line"><span class="keyword">while</span>(<span class="number">1</span>)</span><br><span class="line">&#123;</span><br><span class="line"><span class="built_in">scanf</span>(<span class="string">&quot;%d%d&quot;</span>,&amp;m,&amp;n); <span class="comment">//循环输入每组比分 </span></span><br><span class="line"><span class="keyword">if</span>(m==<span class="number">-1</span> &amp;&amp; n==<span class="number">-1</span>)</span><br><span class="line"><span class="keyword">break</span>; <span class="comment">//满足条件跳出循环 </span></span><br><span class="line">        <span class="comment">/*作差*/</span> </span><br><span class="line"><span class="keyword">if</span>(m&gt;=a)</span><br><span class="line">&#123;</span><br><span class="line">c=m-a;</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">if</span>(m&lt;a)</span><br><span class="line">&#123;</span><br><span class="line">c=a-m;</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">if</span>(n&gt;=b)</span><br><span class="line">&#123;</span><br><span class="line">d=n-b;</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">if</span>(n&lt;b)</span><br><span class="line">&#123;</span><br><span class="line">d=b-n;</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">/*顺序记录编号*/</span> </span><br><span class="line">num++;</span><br><span class="line"><span class="comment">/*判断是否更新最小差以及输出编号*/</span> </span><br><span class="line"><span class="keyword">if</span>(c&lt;=x &amp;&amp; d&lt;=y)</span><br><span class="line">&#123;</span><br><span class="line">x=c;</span><br><span class="line">y=d;</span><br><span class="line">truth=num;</span><br><span class="line">&#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">/*输出*/</span> </span><br><span class="line"><span class="built_in">printf</span> (<span class="string">&quot;%d&quot;</span>,truth);</span><br><span class="line"><span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li><li><h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><p><del>我是小丑</del></p><p>一定要先分析思路，整理逻辑！！！</p></li></ul>]]></content>
+      
+      
+      <categories>
+          
+          <category> ACMICPC </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> C语言 </tag>
+            
+            <tag> ACM </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>使用hexo和github搭建个人博客</title>
       <link href="/posts/fbbf84ee.html"/>
       <url>/posts/fbbf84ee.html</url>
@@ -80,6 +107,17 @@
     
     
     <entry>
+      <title>随便逛逛</title>
+      <link href="/link/index.html"/>
+      <url>/link/index.html</url>
+      
+        <content type="html"><![CDATA[]]></content>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>朋友们</title>
       <link href="/friends/index.html"/>
       <url>/friends/index.html</url>
@@ -94,17 +132,6 @@
       <title>标签</title>
       <link href="/tags/index.html"/>
       <url>/tags/index.html</url>
-      
-        <content type="html"><![CDATA[]]></content>
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title>随便逛逛</title>
-      <link href="/link/index.html"/>
-      <url>/link/index.html</url>
       
         <content type="html"><![CDATA[]]></content>
       
