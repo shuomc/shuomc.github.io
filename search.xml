@@ -4,6 +4,31 @@
   
     
     <entry>
+      <title>（杂谈）求最小公倍数和最大公约数</title>
+      <link href="/posts/9861f9d2.html"/>
+      <url>/posts/9861f9d2.html</url>
+      
+        <content type="html"><![CDATA[<h1 id="循环硬解"><a href="#循环硬解" class="headerlink" title="循环硬解"></a>循环硬解</h1><p>输入a,b两个值，定义一个数i，将a或b赋值i，用i同时对两数取余，两数都能除尽时，i即为最小公倍数，若余数不为零则i++</p><p>同理，定义一个数j，将j赋值为1，利用j++，如果a和b能同时除尽j，则求出最大公约数</p><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span><span class="string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="type">int</span> <span class="title function_">main</span><span class="params">()</span></span><br><span class="line">&#123;</span><br><span class="line"><span class="type">int</span> a,b,i,j;</span><br><span class="line"><span class="type">int</span> max=<span class="number">0</span>;</span><br><span class="line"><span class="built_in">scanf</span>(<span class="string">&quot;%d%d&quot;</span>,&amp;a,&amp;b);</span><br><span class="line"><span class="keyword">for</span>(i=a;;i++)<span class="comment">//求最小公倍数</span></span><br><span class="line">&#123;</span><br><span class="line"><span class="keyword">if</span>(i%a==<span class="number">0</span>&amp;&amp;i%b==<span class="number">0</span>)<span class="comment">//用大于等于a和b的数i(i大于等于a和b，无上限)分别除以a和b，同时除尽的第一个数即为最小公倍数</span></span><br><span class="line"><span class="keyword">break</span>;<span class="comment">//然后循环结束</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">for</span>(j=<span class="number">1</span>;j&lt;=a;j++)<span class="comment">//求最大公约数</span></span><br><span class="line">&#123;</span><br><span class="line"><span class="keyword">if</span>(a%j==<span class="number">0</span>&amp;&amp;b%j==<span class="number">0</span>)<span class="comment">//让a和b分别除以j(j从一开始，j有上限要小于等于a或b)</span></span><br><span class="line"></span><br><span class="line"><span class="comment">//利用j++，如果a和b能同时除尽j</span></span><br><span class="line">&#123;</span><br><span class="line"><span class="keyword">if</span>(max&lt;j)<span class="comment">//再判断j是不是小于a或b的最大公约数，不是则赋值最大值</span></span><br><span class="line">max=j;<span class="comment">//这样求出来的max即为最大公约数</span></span><br><span class="line">&#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="built_in">printf</span>(<span class="string">&quot;%d %d\n&quot;</span>,i,max);<span class="comment">//最后最大公约数用max表示了</span></span><br><span class="line"><span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line"></span><br><span class="line">&#125; </span><br></pre></td></tr></table></figure><p>或使用j–</p><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span><span class="string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="type">int</span> <span class="title function_">main</span><span class="params">()</span></span><br><span class="line">&#123;</span><br><span class="line"><span class="type">int</span> a,b,i,j;</span><br><span class="line"><span class="type">int</span> max=<span class="number">0</span>;</span><br><span class="line">    <span class="keyword">for</span>(j=a;;j--)<span class="comment">//求最大公约数</span></span><br><span class="line">    &#123;</span><br><span class="line">    <span class="keyword">if</span>(a%j==<span class="number">0</span>&amp;&amp;b%j==<span class="number">0</span>)<span class="comment">//还是用a和b除以j(j直接赋值为a或b，示例赋值为a(b也可以的))</span></span><br><span class="line">                          <span class="comment">//利用j--，第一个a和b同时除尽的数j即为最大公约数</span></span><br><span class="line"><span class="keyword">break</span>;<span class="comment">//然后直接结束循环即可</span></span><br><span class="line">&#125;</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">&quot;%d %d\n&quot;</span>,i,j);</span><br><span class="line"><span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125; </span><br></pre></td></tr></table></figure><h1 id="辗转相除"><a href="#辗转相除" class="headerlink" title="辗转相除"></a>辗转相除</h1><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span><span class="string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="type">int</span> <span class="title function_">main</span><span class="params">()</span></span><br><span class="line">&#123;  </span><br><span class="line">  <span class="type">int</span> m,n,t,a,b;</span><br><span class="line">  t=<span class="number">0</span>;</span><br><span class="line">  <span class="built_in">scanf</span>(<span class="string">&quot;%d %d&quot;</span>,&amp;m,&amp;n);</span><br><span class="line">  a=m;</span><br><span class="line">  b=n;<span class="comment">//先把m和n分别赋值给a和b，用来求最小公倍数</span></span><br><span class="line"></span><br><span class="line">    <span class="keyword">while</span>(t=m%n,t!=<span class="number">0</span>)<span class="comment">//限制条件有两个</span></span><br><span class="line"><span class="comment">//求出最小公约数和最大公倍数的数值与m和n大小无关，所以不用考虑是m%n还是n%m，结果一样</span></span><br><span class="line">&#123;</span><br><span class="line">m=n;</span><br><span class="line">n=t;<span class="comment">//辗转相除</span></span><br><span class="line">&#125;</span><br><span class="line"><span class="built_in">printf</span>(<span class="string">&quot;最大公约数是:%d\n&quot;</span>,n);<span class="comment">//最后n为最大公约数</span></span><br><span class="line"><span class="built_in">printf</span>(<span class="string">&quot;最小公倍数是:%d\n&quot;</span>,a/n*b);</span><br><span class="line"></span><br><span class="line">   <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><p>引用文章：<a href="https://blog.csdn.net/m0_66304425/article/details/123920248">https://blog.csdn.net/m0_66304425/article/details/123920248</a></p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 算法 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> C语言 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>ACM迎新题随笔</title>
       <link href="/posts/3d84f0.html"/>
       <url>/posts/3d84f0.html</url>
@@ -74,9 +99,31 @@
     
     
     <entry>
+      <title>关于我</title>
+      <link href="/about/index.html"/>
+      <url>/about/index.html</url>
+      
+        <content type="html"><![CDATA[<h1 id="你们好！我叫shuomc"><a href="#你们好！我叫shuomc" class="headerlink" title="你们好！我叫shuomc"></a>你们好！我叫shuomc</h1><p><del>也可以叫我vsjun</del></p><p>​    本人目前为大一新生，热爱计算机，也喜欢编程，你现在看到的网页是我花了三天时间自学hexo搭建、美化并且加装了一系列插件完成的，后续还会跟进网站的拓展以及建设。</p><h2 id="建立目的"><a href="#建立目的" class="headerlink" title="建立目的"></a>建立目的</h2><p>​    小站的建立是为了能更好地学习计算机相关内容，<del>也想勾搭一些大佬</del>。本人在大学前并没有接触过计算机语言，但一直有浓厚的兴趣，目前为C语言初学者。小站将会更新C语言学习、网站搭建相关的文章以及其它干货经验分享。</p><h2 id="未来"><a href="#未来" class="headerlink" title="未来"></a>未来</h2><p>​    其实我挺喜欢游戏开发，不过我可能做不了技术美术的活，希望能成为优秀的游戏程序员</p><p>​    <strong><del>目标加入UBISOFT</del></strong></p><h2 id="联系我"><a href="#联系我" class="headerlink" title="联系我"></a>联系我</h2><p><strong>QQ：1164659757</strong></p><p><strong>微信：ubivsj2014</strong></p><p><strong>B站UID：45489115</strong></p><p><strong>github：<a href="https://github.com/shuomc">https://github.com/shuomc</a></strong></p><h2 id="本站链接"><a href="#本站链接" class="headerlink" title="本站链接"></a>本站链接</h2><blockquote><p><strong><a href="https://si.shuomc.buzz/">shuomc的博客 - 分享生活, 记录学习</a></strong></p></blockquote><p>如果你觉得我的文章不错，可以分享给身边的朋友，也希望有大佬能指出我的不足，欢迎交换友链！！！</p>]]></content>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>分类</title>
       <link href="/categories/index.html"/>
       <url>/categories/index.html</url>
+      
+        <content type="html"><![CDATA[]]></content>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>随便逛逛</title>
+      <link href="/link/index.html"/>
+      <url>/link/index.html</url>
       
         <content type="html"><![CDATA[]]></content>
       
@@ -96,20 +143,9 @@
     
     
     <entry>
-      <title>关于我</title>
-      <link href="/about/index.html"/>
-      <url>/about/index.html</url>
-      
-        <content type="html"><![CDATA[<h1 id="你们好！我叫shuomc"><a href="#你们好！我叫shuomc" class="headerlink" title="你们好！我叫shuomc"></a>你们好！我叫shuomc</h1><p><del>也可以叫我vsjun</del></p><p>​    本人目前为大一新生，热爱计算机，也喜欢编程，你现在看到的网页是我花了三天时间自学hexo搭建、美化并且加装了一系列插件完成的，后续还会跟进网站的拓展以及建设。</p><h2 id="建立目的"><a href="#建立目的" class="headerlink" title="建立目的"></a>建立目的</h2><p>​    小站的建立是为了能更好地学习计算机相关内容，<del>也想勾搭一些大佬</del>。本人在大学前并没有接触过计算机语言，但一直有浓厚的兴趣，目前为C语言初学者。小站将会更新C语言学习、网站搭建相关的文章以及其它干货经验分享。</p><h2 id="未来"><a href="#未来" class="headerlink" title="未来"></a>未来</h2><p>​    其实我挺喜欢游戏开发，不过我可能做不了技术美术的活，希望能成为优秀的游戏程序员</p><p>​    <strong><del>目标加入UBISOFT</del></strong></p><h2 id="联系我"><a href="#联系我" class="headerlink" title="联系我"></a>联系我</h2><p><strong>QQ：1164659757</strong></p><p><strong>微信：ubivsj2014</strong></p><p><strong>B站UID：45489115</strong></p><p><strong>github：<a href="https://github.com/shuomc">https://github.com/shuomc</a></strong></p><h2 id="本站链接"><a href="#本站链接" class="headerlink" title="本站链接"></a>本站链接</h2><blockquote><p><strong><a href="https://si.shuomc.buzz/">shuomc的博客 - 分享生活, 记录学习</a></strong></p></blockquote><p>如果你觉得我的文章不错，可以分享给身边的朋友，也希望有大佬能指出我的不足，欢迎交换友链！！！</p>]]></content>
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title>随便逛逛</title>
-      <link href="/link/index.html"/>
-      <url>/link/index.html</url>
+      <title>标签</title>
+      <link href="/tags/index.html"/>
+      <url>/tags/index.html</url>
       
         <content type="html"><![CDATA[]]></content>
       
@@ -121,17 +157,6 @@
       <title>朋友们</title>
       <link href="/friends/index.html"/>
       <url>/friends/index.html</url>
-      
-        <content type="html"><![CDATA[]]></content>
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title>标签</title>
-      <link href="/tags/index.html"/>
-      <url>/tags/index.html</url>
       
         <content type="html"><![CDATA[]]></content>
       
