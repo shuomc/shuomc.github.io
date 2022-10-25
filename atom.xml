@@ -41,6 +41,31 @@
   </entry>
   
   <entry>
+    <title>SSH Test</title>
+    <link href="http://example.com/posts/d775714d.html"/>
+    <id>http://example.com/posts/d775714d.html</id>
+    <published>2022-10-14T14:37:39.000Z</published>
+    <updated>2022-10-25T11:50:23.013Z</updated>
+    
+    <content type="html"><![CDATA[<p>test</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;test&lt;/p&gt;
+</summary>
+      
+    
+    
+    
+    <category term="算法" scheme="http://example.com/categories/%E7%AE%97%E6%B3%95/"/>
+    
+    
+    <category term="C语言" scheme="http://example.com/tags/C%E8%AF%AD%E8%A8%80/"/>
+    
+  </entry>
+  
+  <entry>
     <title>ACM迎新题随笔</title>
     <link href="http://example.com/posts/3d84f0.html"/>
     <id>http://example.com/posts/3d84f0.html</id>
