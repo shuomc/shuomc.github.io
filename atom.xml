@@ -181,4 +181,30 @@
     
   </entry>
   
+  <entry>
+    <title>将网站收录到bing和Google 添加sitemap</title>
+    <link href="https://si.shuomc.buzz/posts/15f61212.html"/>
+    <id>https://si.shuomc.buzz/posts/15f61212.html</id>
+    <published>2022-03-17T14:20:39.000Z</published>
+    <updated>2023-03-17T14:20:20.860Z</updated>
+    
+    <content type="html"><![CDATA[<p>由于今天突然发现自己的网站被必应收录了，索性就把它提交给搜索引擎吧</p><p><del>别问为什么没有百度</del></p><h1 id="Hexo配置文件"><a href="#Hexo配置文件" class="headerlink" title="Hexo配置文件"></a>Hexo配置文件</h1><h2 id="准备"><a href="#准备" class="headerlink" title="准备"></a>准备</h2><p>检查根目录下的 <code>_config.yml</code>中sitemap（站点地址）是否开启</p><p><img src="https://i.imgtg.com/2023/03/17/lsuix.png"></p><p><img src="https://i.imgtg.com/2023/03/17/ls32p.png"></p><p>确认开启后安装 sitemap</p><h1 id="生成sitemap"><a href="#生成sitemap" class="headerlink" title="生成sitemap"></a>生成sitemap</h1><h2 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ npm install hexo-generator-sitemap --save</span><br></pre></td></tr></table></figure><p>这样，我们就获得了一份站点地址</p><p>当然，你需要执行 <code>hexo cl</code> 和 <code>hexo g</code> 才能生成public文件并在其中找到它</p><h1 id="提交网站"><a href="#提交网站" class="headerlink" title="提交网站"></a>提交网站</h1><h2 id="Google"><a href="#Google" class="headerlink" title="Google"></a>Google</h2><p>为了确定你是网站管理员，我们需要通过验证。</p><p>进入Google Search Console 输入网址</p><p><img src="https://i.imgtg.com/2023/03/17/lVOVv.png"></p><p>可以是二级域名或者子域名，这里以子域名继续</p><p><img src="https://i.imgtg.com/2023/03/17/lVoqq.png"></p><p>下载验证文件，将它放到</p><p><strong>根目录 \ themes \ 你的主题 \ source 中</strong></p><p><strong>注意，不是根目录下的source！！！</strong></p><h2 id="部署并验证"><a href="#部署并验证" class="headerlink" title="部署并验证"></a>部署并验证</h2><p>进入根目录，一键三连将它部署</p><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">hexo -clean</span><br><span class="line">hexo -g</span><br><span class="line">hexo -d</span><br></pre></td></tr></table></figure><p>部署完毕后，点击验证，稍等片刻</p><p><img src="https://i.imgtg.com/2023/03/17/lVqrc.png"></p><p>如果一切顺利，恭喜</p><h1 id="设置sitemap"><a href="#设置sitemap" class="headerlink" title="设置sitemap"></a>设置sitemap</h1><p><img src="https://i.imgtg.com/2023/03/17/lV5Qr.png"></p><p>在sitemap地址中输入 <code>sitemap.xml</code> 提交</p><p>由于服务器有延迟，需要稍等片刻</p><h2 id="必应"><a href="#必应" class="headerlink" title="必应"></a>必应</h2><p>由于我们已经完成了Google的验证，所以在这边我们只需要导入就行</p><p><img src="https://i.imgtg.com/2023/03/17/lVBCM.png"></p><p><img src="https://i.imgtg.com/2023/03/17/lVvmS.png"></p><p>同样的，我们再设置一下站点地址</p><p><img src="https://i.imgtg.com/2023/03/17/lVyYN.png"></p><p>现在网站可以被正常搜索到了</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;由于今天突然发现自己的网站被必应收录了，索性就把它提交给搜索引擎吧&lt;/p&gt;
+&lt;p&gt;&lt;del&gt;别问为什么没有百度&lt;/del&gt;&lt;/p&gt;
+&lt;h1 id=&quot;Hexo配置文件&quot;&gt;&lt;a href=&quot;#Hexo配置文件&quot; class=&quot;headerlink&quot; title=&quot;Hexo配置文</summary>
+      
+    
+    
+    
+    <category term="hexo" scheme="https://si.shuomc.buzz/categories/hexo/"/>
+    
+    
+    <category term="博客搭建" scheme="https://si.shuomc.buzz/tags/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/"/>
+    
+  </entry>
+  
 </feed>
