@@ -1,11 +1,11 @@
 .layout > div:first-child:not(.recent-posts), #recent-posts > .recent-post-item, #aside-content .card-widget, .layout > .recent-posts .pagination > *:not(.space) {
     border-radius: 8px;
-    background: rgb(255 255 255 / 95%);
+    background: rgba(250, 250, 250, 0.92);
 }
 
 .cardHover, .error404 #error-wrap .error-content, .layout > div:first-child:not(.recent-posts), #recent-posts > .recent-post-item, #aside-content .card-widget, .layout > .recent-posts .pagination > *:not(.space) {
     border-radius: 8px;
-    background: rgb(255 255 255 / 95%);
+    background: rgba(250, 250, 250, 0.92);
 }
 
 .imgHover, .error404 #error-wrap .error-content .error-img img, .article-sort-item-img img, #recent-posts > .recent-post-item .post_cover img.post_bg, #aside-content .aside-list > .aside-list-item .thumbnail > img {
