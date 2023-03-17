@@ -2,7 +2,7 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>http://example.com/link/index.html</loc>
+    <loc>https://si.shuomc.buzz/link/index.html</loc>
     
     <lastmod>2023-03-17</lastmod>
     
@@ -11,7 +11,7 @@
   </url>
   
   <url>
-    <loc>http://example.com/posts/c1fdd123.html</loc>
+    <loc>https://si.shuomc.buzz/posts/c1fdd123.html</loc>
     
     <lastmod>2023-03-17</lastmod>
     
@@ -20,7 +20,7 @@
   </url>
   
   <url>
-    <loc>http://example.com/posts/94087718.html</loc>
+    <loc>https://si.shuomc.buzz/posts/94087718.html</loc>
     
     <lastmod>2023-02-25</lastmod>
     
@@ -29,7 +29,7 @@
   </url>
   
   <url>
-    <loc>http://example.com/about/index.html</loc>
+    <loc>https://si.shuomc.buzz/about/index.html</loc>
     
     <lastmod>2023-02-24</lastmod>
     
@@ -38,7 +38,7 @@
   </url>
   
   <url>
-    <loc>http://example.com/posts/83f97962.html</loc>
+    <loc>https://si.shuomc.buzz/posts/83f97962.html</loc>
     
     <lastmod>2022-11-12</lastmod>
     
@@ -47,7 +47,7 @@
   </url>
   
   <url>
-    <loc>http://example.com/posts/9861f9d2.html</loc>
+    <loc>https://si.shuomc.buzz/posts/9861f9d2.html</loc>
     
     <lastmod>2022-10-14</lastmod>
     
@@ -56,7 +56,7 @@
   </url>
   
   <url>
-    <loc>http://example.com/posts/3d84f0.html</loc>
+    <loc>https://si.shuomc.buzz/posts/3d84f0.html</loc>
     
     <lastmod>2022-10-10</lastmod>
     
@@ -65,7 +65,7 @@
   </url>
   
   <url>
-    <loc>http://example.com/posts/fbbf84ee.html</loc>
+    <loc>https://si.shuomc.buzz/posts/fbbf84ee.html</loc>
     
     <lastmod>2022-10-10</lastmod>
     
@@ -74,7 +74,7 @@
   </url>
   
   <url>
-    <loc>http://example.com/categories/index.html</loc>
+    <loc>https://si.shuomc.buzz/categories/index.html</loc>
     
     <lastmod>2022-10-08</lastmod>
     
@@ -83,7 +83,7 @@
   </url>
   
   <url>
-    <loc>http://example.com/tags/index.html</loc>
+    <loc>https://si.shuomc.buzz/tags/index.html</loc>
     
     <lastmod>2022-10-08</lastmod>
     
@@ -92,7 +92,7 @@
   </url>
   
   <url>
-    <loc>http://example.com/friends/index.html</loc>
+    <loc>https://si.shuomc.buzz/friends/index.html</loc>
     
     <lastmod>2022-10-08</lastmod>
     
@@ -102,7 +102,7 @@
   
 
   <url>
-    <loc>http://example.com/</loc>
+    <loc>https://si.shuomc.buzz/</loc>
     <lastmod>2023-03-17</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
@@ -110,56 +110,56 @@
 
   
   <url>
-    <loc>http://example.com/tags/Hexo/</loc>
+    <loc>https://si.shuomc.buzz/tags/C%E8%AF%AD%E8%A8%80/</loc>
     <lastmod>2023-03-17</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>http://example.com/tags/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/</loc>
+    <loc>https://si.shuomc.buzz/tags/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/</loc>
     <lastmod>2023-03-17</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>http://example.com/tags/C%E8%AF%AD%E8%A8%80/</loc>
+    <loc>https://si.shuomc.buzz/tags/ACM/</loc>
     <lastmod>2023-03-17</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>http://example.com/tags/ACM/</loc>
+    <loc>https://si.shuomc.buzz/tags/Hexo/</loc>
     <lastmod>2023-03-17</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>http://example.com/tags/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/</loc>
+    <loc>https://si.shuomc.buzz/tags/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/</loc>
     <lastmod>2023-03-17</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>http://example.com/tags/C/</loc>
+    <loc>https://si.shuomc.buzz/tags/C/</loc>
     <lastmod>2023-03-17</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>http://example.com/tags/%E5%AD%97%E7%AC%A6%E4%B8%B2/</loc>
+    <loc>https://si.shuomc.buzz/tags/%E5%AD%97%E7%AC%A6%E4%B8%B2/</loc>
     <lastmod>2023-03-17</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>http://example.com/tags/%E6%8C%87%E9%92%88/</loc>
+    <loc>https://si.shuomc.buzz/tags/%E6%8C%87%E9%92%88/</loc>
     <lastmod>2023-03-17</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -168,42 +168,42 @@
 
   
   <url>
-    <loc>http://example.com/categories/Hexo/</loc>
+    <loc>https://si.shuomc.buzz/categories/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/</loc>
     <lastmod>2023-03-17</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>http://example.com/categories/ACMICPC/</loc>
+    <loc>https://si.shuomc.buzz/categories/ACMICPC/</loc>
     <lastmod>2023-03-17</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>http://example.com/categories/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/</loc>
+    <loc>https://si.shuomc.buzz/categories/Hexo/</loc>
     <lastmod>2023-03-17</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>http://example.com/categories/%E5%AD%97%E7%AC%A6%E4%B8%B2/</loc>
+    <loc>https://si.shuomc.buzz/categories/%E5%AD%97%E7%AC%A6%E4%B8%B2/</loc>
     <lastmod>2023-03-17</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>http://example.com/categories/%E7%AE%97%E6%B3%95/</loc>
+    <loc>https://si.shuomc.buzz/categories/%E6%8C%87%E9%92%88/</loc>
     <lastmod>2023-03-17</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>http://example.com/categories/%E6%8C%87%E9%92%88/</loc>
+    <loc>https://si.shuomc.buzz/categories/%E7%AE%97%E6%B3%95/</loc>
     <lastmod>2023-03-17</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
