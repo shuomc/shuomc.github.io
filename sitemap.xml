@@ -2,6 +2,15 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://si.shuomc.buzz/posts/2bde0cd6.html</loc>
+    
+    <lastmod>2023-05-10</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>https://si.shuomc.buzz/posts/734676d4.html</loc>
     
     <lastmod>2023-05-06</lastmod>
@@ -139,7 +148,7 @@
 
   <url>
     <loc>https://si.shuomc.buzz/</loc>
-    <lastmod>2023-05-06</lastmod>
+    <lastmod>2023-05-10</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
   </url>
@@ -147,42 +156,42 @@
   
   <url>
     <loc>https://si.shuomc.buzz/tags/C-C/</loc>
-    <lastmod>2023-05-06</lastmod>
+    <lastmod>2023-05-10</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://si.shuomc.buzz/tags/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/</loc>
-    <lastmod>2023-05-06</lastmod>
+    <lastmod>2023-05-10</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://si.shuomc.buzz/tags/Hexo/</loc>
-    <lastmod>2023-05-06</lastmod>
+    <lastmod>2023-05-10</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://si.shuomc.buzz/tags/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/</loc>
-    <lastmod>2023-05-06</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://si.shuomc.buzz/tags/%E6%8C%87%E9%92%88/</loc>
-    <lastmod>2023-05-06</lastmod>
+    <lastmod>2023-05-10</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://si.shuomc.buzz/tags/%E5%AD%97%E7%AC%A6%E4%B8%B2/</loc>
-    <lastmod>2023-05-06</lastmod>
+    <lastmod>2023-05-10</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://si.shuomc.buzz/tags/%E6%8C%87%E9%92%88/</loc>
+    <lastmod>2023-05-10</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
@@ -191,35 +200,35 @@
   
   <url>
     <loc>https://si.shuomc.buzz/categories/%E7%AE%97%E6%B3%95/</loc>
-    <lastmod>2023-05-06</lastmod>
+    <lastmod>2023-05-10</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://si.shuomc.buzz/categories/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/</loc>
-    <lastmod>2023-05-06</lastmod>
+    <lastmod>2023-05-10</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://si.shuomc.buzz/categories/Hexo/</loc>
-    <lastmod>2023-05-06</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://si.shuomc.buzz/categories/%E6%8C%87%E9%92%88/</loc>
-    <lastmod>2023-05-06</lastmod>
+    <lastmod>2023-05-10</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://si.shuomc.buzz/categories/%E5%AD%97%E7%AC%A6%E4%B8%B2/</loc>
-    <lastmod>2023-05-06</lastmod>
+    <lastmod>2023-05-10</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://si.shuomc.buzz/categories/%E6%8C%87%E9%92%88/</loc>
+    <lastmod>2023-05-10</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
