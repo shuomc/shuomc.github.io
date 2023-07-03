@@ -4,6 +4,31 @@
   
     
     <entry>
+      <title>简单模拟</title>
+      <link href="/posts/678c889c.html"/>
+      <url>/posts/678c889c.html</url>
+      
+        <content type="html"><![CDATA[<p><em>同学出的模拟题</em></p><h1 id="题目描述"><a href="#题目描述" class="headerlink" title="题目描述"></a>题目描述</h1><p>最近可莉要出新皮肤了，她高兴坏了，决定炸个鱼庆祝一下。但是她又害怕被琴团长发现，于是决定去璃月的渌华池旁边炸鱼。 那里有着三种鱼类，金赤假龙、锖假龙、花锵。可莉害怕动静太大把仙人引来，于是决定用威力较小的炸弹。 每次爆炸只能把以炸弹为中心<strong>上下左右</strong>距离为<strong>r</strong>内的鱼炸死。 数据范围 池水的大小为100*100； 每种鱼的数量不超过5条； 炸弹数量0≤n≤5；</p><h2 id="输入"><a href="#输入" class="headerlink" title="输入"></a>输入</h2><p>第一行输入一个<code>n</code>。表示有n颗炸弹。 第二行输入<code>a，b，c</code>。表示有a条金赤假龙、b条锖假龙、c条花锵。 接着三行分别输入所有金赤假龙、锖假龙、花锵的坐标（<code>x，y</code>）； 接着输入n行，每行三个数，<code>x，y，r</code>；（表示炸弹的坐标（x，y），爆炸半径是r）</p><h2 id="输出"><a href="#输出" class="headerlink" title="输出"></a>输出</h2><p>输出只有一行，表示剩余的金赤假龙、锖假龙、花锵各有多少条。</p><h2 id="样例输入"><a href="#样例输入" class="headerlink" title="样例输入"></a>样例输入</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">3</span><br><span class="line">1 1 1</span><br><span class="line">1 1</span><br><span class="line">4 2</span><br><span class="line">3 6</span><br><span class="line">5 5 1</span><br><span class="line">5 3 2</span><br><span class="line">3 1 2</span><br></pre></td></tr></table></figure><h2 id="样例输出"><a href="#样例输出" class="headerlink" title="样例输出"></a>样例输出</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">0 1 1</span><br></pre></td></tr></table></figure><h1 id="解答"><a href="#解答" class="headerlink" title="解答"></a>解答</h1><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span><span class="string">&lt;bits/stdc++.h&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"></span><br><span class="line"><span class="type">int</span> ditu[<span class="number">101</span>][<span class="number">101</span>];</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line"><span class="type">int</span> n,a,b,c,r;</span><br><span class="line"><span class="type">int</span> resa=<span class="number">0</span>,resb=<span class="number">0</span>,resc=<span class="number">0</span>;</span><br><span class="line">cin &gt;&gt; n &gt;&gt; a &gt;&gt; b &gt;&gt; c;</span><br><span class="line"><span class="built_in">memset</span>(ditu,<span class="number">0</span>,<span class="built_in">sizeof</span>(ditu));</span><br><span class="line"><span class="keyword">for</span>(<span class="type">int</span> i=<span class="number">0</span>;i&lt;a;i++)</span><br><span class="line">&#123;</span><br><span class="line"><span class="type">int</span> x,y;</span><br><span class="line">cin &gt;&gt; x &gt;&gt; y;</span><br><span class="line">ditu[x][y] = <span class="number">1</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">for</span>(<span class="type">int</span> i=<span class="number">0</span>;i&lt;b;i++)</span><br><span class="line">&#123;</span><br><span class="line"><span class="type">int</span> x,y;</span><br><span class="line">cin &gt;&gt; x &gt;&gt; y;</span><br><span class="line">ditu[x][y] = <span class="number">2</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">for</span>(<span class="type">int</span> i=<span class="number">0</span>;i&lt;c;i++)</span><br><span class="line">&#123;</span><br><span class="line"><span class="type">int</span> x,y;</span><br><span class="line">cin &gt;&gt; x &gt;&gt; y;</span><br><span class="line">ditu[x][y] = <span class="number">3</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">for</span>(<span class="type">int</span> i=<span class="number">0</span>;i&lt;n;i++)</span><br><span class="line">&#123;</span><br><span class="line"><span class="type">int</span> x,y;</span><br><span class="line">cin &gt;&gt; x &gt;&gt; y &gt;&gt; r;</span><br><span class="line">ditu[x][y] = <span class="number">0</span>;</span><br><span class="line"><span class="keyword">for</span>(<span class="type">int</span> j=<span class="number">1</span>;j&lt;=r;j++)</span><br><span class="line">&#123;</span><br><span class="line">ditu[x-j][y] = <span class="number">0</span>;</span><br><span class="line">ditu[x+j][y] = <span class="number">0</span>;</span><br><span class="line">ditu[x][y-j] = <span class="number">0</span>;</span><br><span class="line">ditu[x][y+j] = <span class="number">0</span>;</span><br><span class="line">&#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">for</span>(<span class="type">int</span> i=<span class="number">0</span>;i&lt;<span class="number">100</span>;i++)</span><br><span class="line">&#123;</span><br><span class="line"><span class="keyword">for</span>(<span class="type">int</span> j=<span class="number">0</span>;j&lt;<span class="number">100</span>;j++)</span><br><span class="line">&#123;</span><br><span class="line"><span class="keyword">if</span>(ditu[i][j] == <span class="number">1</span>)</span><br><span class="line">&#123;</span><br><span class="line">resa++;</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">else</span> <span class="keyword">if</span>(ditu[i][j] == <span class="number">2</span>)</span><br><span class="line">&#123;</span><br><span class="line">resb++;</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">else</span> <span class="keyword">if</span>(ditu[i][j] == <span class="number">3</span>)</span><br><span class="line">&#123;</span><br><span class="line">resc++;</span><br><span class="line">&#125;</span><br><span class="line">&#125;</span><br><span class="line">&#125;</span><br><span class="line">cout &lt;&lt; resa &lt;&lt; <span class="string">&#x27; &#x27;</span> &lt;&lt; resb &lt;&lt; <span class="string">&#x27; &#x27;</span> &lt;&lt; resc &lt;&lt; <span class="string">&#x27; &#x27;</span> &lt;&lt; endl;</span><br><span class="line"><span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>]]></content>
+      
+      
+      <categories>
+          
+          <category> 算法 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> C/C++ </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>2023GPLT L2-1 堆宝塔</title>
       <link href="/posts/2bde0cd6.html"/>
       <url>/posts/2bde0cd6.html</url>
@@ -303,9 +328,9 @@
     
     
     <entry>
-      <title>分类</title>
-      <link href="/categories/index.html"/>
-      <url>/categories/index.html</url>
+      <title>朋友们</title>
+      <link href="/friends/index.html"/>
+      <url>/friends/index.html</url>
       
         <content type="html"><![CDATA[]]></content>
       
@@ -336,9 +361,9 @@
     
     
     <entry>
-      <title>朋友们</title>
-      <link href="/friends/index.html"/>
-      <url>/friends/index.html</url>
+      <title>随便逛逛</title>
+      <link href="/link/index.html"/>
+      <url>/link/index.html</url>
       
         <content type="html"><![CDATA[]]></content>
       
@@ -347,9 +372,9 @@
     
     
     <entry>
-      <title>随便逛逛</title>
-      <link href="/link/index.html"/>
-      <url>/link/index.html</url>
+      <title>分类</title>
+      <link href="/categories/index.html"/>
+      <url>/categories/index.html</url>
       
         <content type="html"><![CDATA[]]></content>
       
