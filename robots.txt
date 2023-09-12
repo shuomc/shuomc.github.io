@@ -4,4 +4,4 @@ Allow: /archives/
 Allow: /categories/
 Allow: /tags/
 Allow: /about/
-Sitemap: https://si.shuomc.buzz/sitemap.xml
+Sitemap: https://blog.shuomc.cloud/sitemap.xml

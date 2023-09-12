@@ -2,7 +2,16 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>https://si.shuomc.buzz/posts/678c889c.html</loc>
+    <loc>https://blog.shuomc.cloud/posts/2d53b15f.html</loc>
+    
+    <lastmod>2023-09-05</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://blog.shuomc.cloud/posts/678c889c.html</loc>
     
     <lastmod>2023-07-03</lastmod>
     
@@ -11,7 +20,7 @@
   </url>
   
   <url>
-    <loc>https://si.shuomc.buzz/posts/2bde0cd6.html</loc>
+    <loc>https://blog.shuomc.cloud/posts/2bde0cd6.html</loc>
     
     <lastmod>2023-05-10</lastmod>
     
@@ -20,7 +29,7 @@
   </url>
   
   <url>
-    <loc>https://si.shuomc.buzz/posts/734676d4.html</loc>
+    <loc>https://blog.shuomc.cloud/posts/734676d4.html</loc>
     
     <lastmod>2023-05-06</lastmod>
     
@@ -29,7 +38,7 @@
   </url>
   
   <url>
-    <loc>https://si.shuomc.buzz/posts/9861f9d2.html</loc>
+    <loc>https://blog.shuomc.cloud/posts/9861f9d2.html</loc>
     
     <lastmod>2023-05-06</lastmod>
     
@@ -38,7 +47,7 @@
   </url>
   
   <url>
-    <loc>https://si.shuomc.buzz/posts/83f97962.html</loc>
+    <loc>https://blog.shuomc.cloud/posts/83f97962.html</loc>
     
     <lastmod>2023-05-06</lastmod>
     
@@ -47,7 +56,7 @@
   </url>
   
   <url>
-    <loc>https://si.shuomc.buzz/posts/94087718.html</loc>
+    <loc>https://blog.shuomc.cloud/posts/94087718.html</loc>
     
     <lastmod>2023-05-06</lastmod>
     
@@ -56,7 +65,7 @@
   </url>
   
   <url>
-    <loc>https://si.shuomc.buzz/posts/2d53b15f.html</loc>
+    <loc>https://blog.shuomc.cloud/posts/ea4f276e.html</loc>
     
     <lastmod>2023-05-06</lastmod>
     
@@ -65,7 +74,7 @@
   </url>
   
   <url>
-    <loc>https://si.shuomc.buzz/posts/ea4f276e.html</loc>
+    <loc>https://blog.shuomc.cloud/posts/c1fdd123.html</loc>
     
     <lastmod>2023-05-06</lastmod>
     
@@ -74,7 +83,7 @@
   </url>
   
   <url>
-    <loc>https://si.shuomc.buzz/posts/c1fdd123.html</loc>
+    <loc>https://blog.shuomc.cloud/posts/dc6681d8.html</loc>
     
     <lastmod>2023-05-06</lastmod>
     
@@ -83,16 +92,7 @@
   </url>
   
   <url>
-    <loc>https://si.shuomc.buzz/posts/dc6681d8.html</loc>
-    
-    <lastmod>2023-05-06</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://si.shuomc.buzz/posts/15f61212.html</loc>
+    <loc>https://blog.shuomc.cloud/posts/15f61212.html</loc>
     
     <lastmod>2023-03-18</lastmod>
     
@@ -101,7 +101,7 @@
   </url>
   
   <url>
-    <loc>https://si.shuomc.buzz/about/index.html</loc>
+    <loc>https://blog.shuomc.cloud/about/index.html</loc>
     
     <lastmod>2023-03-18</lastmod>
     
@@ -110,7 +110,7 @@
   </url>
   
   <url>
-    <loc>https://si.shuomc.buzz/link/index.html</loc>
+    <loc>https://blog.shuomc.cloud/link/index.html</loc>
     
     <lastmod>2023-03-17</lastmod>
     
@@ -119,7 +119,7 @@
   </url>
   
   <url>
-    <loc>https://si.shuomc.buzz/posts/fbbf84ee.html</loc>
+    <loc>https://blog.shuomc.cloud/posts/fbbf84ee.html</loc>
     
     <lastmod>2022-10-10</lastmod>
     
@@ -128,7 +128,7 @@
   </url>
   
   <url>
-    <loc>https://si.shuomc.buzz/categories/index.html</loc>
+    <loc>https://blog.shuomc.cloud/categories/index.html</loc>
     
     <lastmod>2022-10-08</lastmod>
     
@@ -137,7 +137,7 @@
   </url>
   
   <url>
-    <loc>https://si.shuomc.buzz/tags/index.html</loc>
+    <loc>https://blog.shuomc.cloud/tags/index.html</loc>
     
     <lastmod>2022-10-08</lastmod>
     
@@ -146,7 +146,7 @@
   </url>
   
   <url>
-    <loc>https://si.shuomc.buzz/friends/index.html</loc>
+    <loc>https://blog.shuomc.cloud/friends/index.html</loc>
     
     <lastmod>2022-10-08</lastmod>
     
@@ -156,51 +156,51 @@
   
 
   <url>
-    <loc>https://si.shuomc.buzz/</loc>
-    <lastmod>2023-07-03</lastmod>
+    <loc>https://blog.shuomc.cloud/</loc>
+    <lastmod>2023-09-12</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
   </url>
 
   
   <url>
-    <loc>https://si.shuomc.buzz/tags/C-C/</loc>
-    <lastmod>2023-07-03</lastmod>
+    <loc>https://blog.shuomc.cloud/tags/C-C/</loc>
+    <lastmod>2023-09-12</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>https://si.shuomc.buzz/tags/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/</loc>
-    <lastmod>2023-07-03</lastmod>
+    <loc>https://blog.shuomc.cloud/tags/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/</loc>
+    <lastmod>2023-09-12</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>https://si.shuomc.buzz/tags/Hexo/</loc>
-    <lastmod>2023-07-03</lastmod>
+    <loc>https://blog.shuomc.cloud/tags/Hexo/</loc>
+    <lastmod>2023-09-12</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>https://si.shuomc.buzz/tags/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/</loc>
-    <lastmod>2023-07-03</lastmod>
+    <loc>https://blog.shuomc.cloud/tags/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/</loc>
+    <lastmod>2023-09-12</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>https://si.shuomc.buzz/tags/%E5%AD%97%E7%AC%A6%E4%B8%B2/</loc>
-    <lastmod>2023-07-03</lastmod>
+    <loc>https://blog.shuomc.cloud/tags/%E6%8C%87%E9%92%88/</loc>
+    <lastmod>2023-09-12</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>https://si.shuomc.buzz/tags/%E6%8C%87%E9%92%88/</loc>
-    <lastmod>2023-07-03</lastmod>
+    <loc>https://blog.shuomc.cloud/tags/%E5%AD%97%E7%AC%A6%E4%B8%B2/</loc>
+    <lastmod>2023-09-12</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
@@ -208,36 +208,36 @@
 
   
   <url>
-    <loc>https://si.shuomc.buzz/categories/%E7%AE%97%E6%B3%95/</loc>
-    <lastmod>2023-07-03</lastmod>
+    <loc>https://blog.shuomc.cloud/categories/%E7%AE%97%E6%B3%95/</loc>
+    <lastmod>2023-09-12</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>https://si.shuomc.buzz/categories/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/</loc>
-    <lastmod>2023-07-03</lastmod>
+    <loc>https://blog.shuomc.cloud/categories/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/</loc>
+    <lastmod>2023-09-12</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>https://si.shuomc.buzz/categories/Hexo/</loc>
-    <lastmod>2023-07-03</lastmod>
+    <loc>https://blog.shuomc.cloud/categories/Hexo/</loc>
+    <lastmod>2023-09-12</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>https://si.shuomc.buzz/categories/%E5%AD%97%E7%AC%A6%E4%B8%B2/</loc>
-    <lastmod>2023-07-03</lastmod>
+    <loc>https://blog.shuomc.cloud/categories/%E6%8C%87%E9%92%88/</loc>
+    <lastmod>2023-09-12</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>https://si.shuomc.buzz/categories/%E6%8C%87%E9%92%88/</loc>
-    <lastmod>2023-07-03</lastmod>
+    <loc>https://blog.shuomc.cloud/categories/%E5%AD%97%E7%AC%A6%E4%B8%B2/</loc>
+    <lastmod>2023-09-12</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
