@@ -1,0 +1,378 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"><title>使用 QEMU 启动 openEuler RISC-V 系统 | shuomc的小站</title><meta name="author" content="shuomc"><meta name="copyright" content="shuomc"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="本文部分转载、整理自openEuler社区、qemu.wiki 原文章链接接  通过 QEMU 仿真 RISC-V 环境并启动 openEuler RISC-V 系统 installation (openeuler.org) Hosts&amp;#x2F;Linux - QEMU  安装QEMU系统环境Ub"><link rel="shortcut icon" href="/img/photo_2022-10-08_08-43-07.jpg"><link rel="canonical" href="https://blog.shuomc.cloud/posts/16923974"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css" media="print" onload="this.media='all'"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.min.css" media="print" onload="this.media='all'"><script>const GLOBAL_CONFIG = { 
+  root: '/',
+  algolia: undefined,
+  localSearch: {"path":"/search.xml","preload":false,"languages":{"hits_empty":"找不到您查询的内容：${query}"}},
+  translate: undefined,
+  noticeOutdate: undefined,
+  highlight: {"plugin":"highlighjs","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":300},
+  copy: {
+    success: '复制成功',
+    error: '复制错误',
+    noSupport: '浏览器不支持'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '天',
+  date_suffix: {
+    just: '刚刚',
+    min: '分钟前',
+    hour: '小时前',
+    day: '天前',
+    month: '个月前'
+  },
+  copyright: undefined,
+  lightbox: 'fancybox',
+  Snackbar: undefined,
+  source: {
+    justifiedGallery: {
+      js: 'https://cdn.jsdelivr.net/npm/flickr-justified-gallery/dist/fjGallery.min.js',
+      css: 'https://cdn.jsdelivr.net/npm/flickr-justified-gallery/dist/fjGallery.min.css'
+    }
+  },
+  isPhotoFigcaption: false,
+  islazyload: true,
+  isAnchor: false
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: '使用 QEMU 启动 openEuler RISC-V 系统',
+  isPost: true,
+  isHome: false,
+  isHighlightShrink: false,
+  isToc: true,
+  postUpdate: '2024-09-27 14:01:14'
+}</script><noscript><style type="text/css">
+  #nav {
+    opacity: 1
+  }
+  .justified-gallery img {
+    opacity: 1
+  }
+
+  #recent-posts time,
+  #post-meta time {
+    display: inline !important
+  }
+</style></noscript><script>(win=>{
+    win.saveToLocal = {
+      set: function setWithExpiry(key, value, ttl) {
+        if (ttl === 0) return
+        const now = new Date()
+        const expiryDay = ttl * 86400000
+        const item = {
+          value: value,
+          expiry: now.getTime() + expiryDay,
+        }
+        localStorage.setItem(key, JSON.stringify(item))
+      },
+
+      get: function getWithExpiry(key) {
+        const itemStr = localStorage.getItem(key)
+
+        if (!itemStr) {
+          return undefined
+        }
+        const item = JSON.parse(itemStr)
+        const now = new Date()
+
+        if (now.getTime() > item.expiry) {
+          localStorage.removeItem(key)
+          return undefined
+        }
+        return item.value
+      }
+    }
+  
+    win.getScript = url => new Promise((resolve, reject) => {
+      const script = document.createElement('script')
+      script.src = url
+      script.async = true
+      script.onerror = reject
+      script.onload = script.onreadystatechange = function() {
+        const loadState = this.readyState
+        if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+        script.onload = script.onreadystatechange = null
+        resolve()
+      }
+      document.head.appendChild(script)
+    })
+  
+      win.activateDarkMode = function () {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+        }
+      }
+      win.activateLightMode = function () {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
+        }
+      }
+      const t = saveToLocal.get('theme')
+    
+          if (t === 'dark') activateDarkMode()
+          else if (t === 'light') activateLightMode()
+        
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        if (asideStatus === 'hide') {
+          document.documentElement.classList.add('hide-aside')
+        } else {
+          document.documentElement.classList.remove('hide-aside')
+        }
+      }
+    
+    const detectApple = () => {
+      if(/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)){
+        document.documentElement.classList.add('apple')
+      }
+    }
+    detectApple()
+    })(window)</script><link rel="stylesheet" href="/css/mycss.css"><!-- hexo injector head_end start --><link rel="stylesheet" href="https://cdn.cbd.int/hexo-butterfly-wowjs/lib/animate.min.css" media="print" onload="this.media='screen'"><link rel="stylesheet" href="https://cdn.cbd.int/hexo-butterfly-clock-anzhiyu/lib/clock.min.css" /><!-- hexo injector head_end end --><meta name="generator" content="Hexo 6.3.0"><link rel="alternate" href="/atom.xml" title="shuomc的小站" type="application/atom+xml">
+</head><body><div id="loading-box" onclick="document.getElementById(&quot;loading-box&quot;).classList.add(&quot;loaded&quot;)"><div class="loading-bg"><div class="loading-img"></div><div class="loading-image-dot"></div></div></div><script>const preloader = {
+  endLoading: () => {
+    document.body.style.overflow = 'auto';
+    document.getElementById('loading-box').classList.add("loaded")
+  },
+  initLoading: () => {
+    document.body.style.overflow = '';
+    document.getElementById('loading-box').classList.remove("loaded")
+
+  }
+}
+window.addEventListener('load',()=> { preloader.endLoading() })
+
+if (false) {
+  document.addEventListener('pjax:send', () => { preloader.initLoading() })
+  document.addEventListener('pjax:complete', () => { preloader.endLoading() })
+}</script><link rel="stylesheet" href="/css/progress_bar.css"/><script src="https://cdn.jsdelivr.net/npm/pace-js/pace.min.js"></script><div id="web_bg"></div><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img is-center"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://blog.imtop1.moe/wp-content/themes/vsjun.jpg" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="sidebar-site-data site-data is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">15</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">10</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">7</div></a></div><hr/><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 主页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 历史上传</span></a></div><div class="menus_item"><a class="site-page" href="/comments/"><i class="fa-fw fas fa-envelope"></i><span> 留言板</span></a></div><div class="menus_item"><a class="site-page" href="/bangumis/"><i class="fa-fw fas fa-film"></i><span> 我的追番</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page group" href="javascript:void(0);"><i class="fa-fw fas fa-satellite-dish"></i><span> 更多</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/link/"><i class="fa-fw fas fa-link"></i><span> 友情链接</span></a></li><li><a class="site-page child" href="/about/"><i class="fa-fw fas fa-heart"></i><span> 关于</span></a></li></ul></div></div></div></div><div class="post" id="body-wrap"><header class="post-bg" id="page-header" style="background-image: url('https://imgbed.yiyunt.cn/img/190')"><nav id="nav"><span id="blog_name"><a id="site-name" href="/">shuomc的小站</a></span><div id="menus"><div id="search-button"><a class="site-page social-icon search"><i class="fas fa-search fa-fw"></i><span> 搜索</span></a></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 主页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 历史上传</span></a></div><div class="menus_item"><a class="site-page" href="/comments/"><i class="fa-fw fas fa-envelope"></i><span> 留言板</span></a></div><div class="menus_item"><a class="site-page" href="/bangumis/"><i class="fa-fw fas fa-film"></i><span> 我的追番</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page group" href="javascript:void(0);"><i class="fa-fw fas fa-satellite-dish"></i><span> 更多</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/link/"><i class="fa-fw fas fa-link"></i><span> 友情链接</span></a></li><li><a class="site-page child" href="/about/"><i class="fa-fw fas fa-heart"></i><span> 关于</span></a></li></ul></div></div><div id="toggle-menu"><a class="site-page"><i class="fas fa-bars fa-fw"></i></a></div></div></nav><div id="post-info"><h1 class="post-title">使用 QEMU 启动 openEuler RISC-V 系统</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">发表于</span><time class="post-meta-date-created" datetime="2024-09-27T05:50:39.000Z" title="发表于 2024-09-27 13:50:39">2024-09-27</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2024-09-27T06:01:14.252Z" title="更新于 2024-09-27 14:01:14">2024-09-27</time></span><span class="post-meta-categories"><span class="post-meta-separator">|</span><i class="fas fa-inbox fa-fw post-meta-icon"></i><a class="post-meta-categories" href="/categories/RISC-V/">RISC-V</a></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-wordcount"><i class="far fa-file-word fa-fw post-meta-icon"></i><span class="post-meta-label">字数总计:</span><span class="word-count">879</span><span class="post-meta-separator">|</span><i class="far fa-clock fa-fw post-meta-icon"></i><span class="post-meta-label">阅读时长:</span><span>4分钟</span></span><span class="post-meta-separator">|</span><span class="post-meta-pv-cv" id="" data-flag-title="使用 QEMU 启动 openEuler RISC-V 系统"><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">阅读量:</span><span id="busuanzi_value_page_pv"><i class="fa-solid fa-spinner fa-spin"></i></span></span></div></div></div><section class="main-hero-waves-area waves-area"><svg class="waves-svg" xmlns="http://www.w3.org/2000/svg" xlink="http://www.w3.org/1999/xlink" viewBox="0 24 150 28" preserveAspectRatio="none" shape-rendering="auto"><defs><path id="gentle-wave" d="M -160 44 c 30 0 58 -18 88 -18 s 58 18 88 18 s 58 -18 88 -18 s 58 18 88 18 v 44 h -352 Z"></path></defs><g class="parallax"><use href="#gentle-wave" x="48" y="0"></use><use href="#gentle-wave" x="48" y="3"></use><use href="#gentle-wave" x="48" y="5"></use><use href="#gentle-wave" x="48" y="7"></use></g></svg></section><div id="post-top-cover"><img class="nolazyload" id="post-top-bg" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="background-image: url('https://imgbed.yiyunt.cn/img/190')"></div></header><main class="layout" id="content-inner"><div id="post"><article class="post-content" id="article-container"><p><strong>本文部分转载、整理自openEuler社区、qemu.wiki</strong></p>
+<p>原文章链接接</p>
+<blockquote>
+<p><a target="_blank" rel="noopener" href="https://www.openeuler.org/zh/blog/phoebe/2023-09-26-Run-openEuler-RISC-V-On-Qemu.html">通过 QEMU 仿真 RISC-V 环境并启动 openEuler RISC-V 系统</a></p>
+<p><a target="_blank" rel="noopener" href="https://docs.openeuler.org/zh/docs/22.03_LTS_SP2/docs/Installation/installation.html">installation (openeuler.org)</a></p>
+<p><a target="_blank" rel="noopener" href="https://wiki.qemu.org/Hosts/Linux">Hosts&#x2F;Linux - QEMU</a></p>
+</blockquote>
+<h1 id="安装QEMU"><a href="#安装QEMU" class="headerlink" title="安装QEMU"></a>安装QEMU</h1><h2 id="系统环境"><a href="#系统环境" class="headerlink" title="系统环境"></a>系统环境</h2><p>Ubuntu 22.04.4 LTS <em>( WSL2 )</em></p>
+<h2 id="安装支持-RISC-V-架构的-QEMU-模拟器"><a href="#安装支持-RISC-V-架构的-QEMU-模拟器" class="headerlink" title="安装支持 RISC-V 架构的 QEMU 模拟器"></a>安装支持 RISC-V 架构的 QEMU 模拟器</h2><p>目前大多数发行版都自带qemu-riscv64软件包，但由于自带的包常常过旧，我们采用手动安装。</p>
+<h3 id="安装之前"><a href="#安装之前" class="headerlink" title="安装之前"></a>安装之前</h3><p>查看官方 wiki 获取帮助，安装必要的软件包 <a target="_blank" rel="noopener" href="https://wiki.qemu.org/Hosts/Linux#Simple_build_and_test">Hosts&#x2F;Linux - QEMU</a></p>
+<h4 id="Required-additional-packages"><a href="#Required-additional-packages" class="headerlink" title="Required additional packages"></a>Required additional packages</h4><ul>
+<li>git (30 MiB), version manager</li>
+<li>glib2.0-dev (9 MiB), this automatically includes zlib1g-dev</li>
+<li>libfdt-devel</li>
+</ul>
+<p>For Ubuntu LTS (and maybe other Debian based distributions), all required additional packages can be installed like this:</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo apt-get install git libglib2.0-dev libfdt-dev libpixman-1-dev zlib1g-dev ninja-build</span><br></pre></td></tr></table></figure>
+
+<h4 id="Recommended-additional-packages"><a href="#Recommended-additional-packages" class="headerlink" title="Recommended additional packages"></a>Recommended additional packages</h4><p>For Ubuntu (and maybe other Debian based distributions), most of the recommended additional packages for maximum code coverage can be installed like this:</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">sudo apt-get install git-email</span><br><span class="line">sudo apt-get install libaio-dev libbluetooth-dev libcapstone-dev libbrlapi-dev libbz2-dev</span><br><span class="line">sudo apt-get install libcap-ng-dev libcurl4-gnutls-dev libgtk-3-dev</span><br><span class="line">sudo apt-get install libibverbs-dev libjpeg8-dev libncurses5-dev libnuma-dev</span><br><span class="line">sudo apt-get install librbd-dev librdmacm-dev</span><br><span class="line">sudo apt-get install libsasl2-dev libsdl2-dev libseccomp-dev libsnappy-dev libssh-dev</span><br><span class="line">sudo apt-get install libvde-dev libvdeplug-dev libvte-2.91-dev libxen-dev liblzo2-dev</span><br><span class="line">sudo apt-get install valgrind xfslibs-dev </span><br></pre></td></tr></table></figure>
+
+<h3 id="手动编译安装"><a href="#手动编译安装" class="headerlink" title="手动编译安装"></a>手动编译安装</h3><p>这里作者选择qemu-9.1.0</p>
+<p>查看qemu版本： <a target="_blank" rel="noopener" href="https://download.qemu.org/">Index of &#x2F; (qemu.org)</a></p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">wget https://download.qemu.org/qemu-9.1.0.tar.xz</span><br><span class="line">tar -xvf qemu-9.1.0.tar.xz</span><br><span class="line"><span class="built_in">cd</span> qemu-9.1.0</span><br><span class="line"><span class="built_in">mkdir</span> res</span><br><span class="line"><span class="built_in">cd</span> res</span><br><span class="line">sudo apt install libspice-protocol-dev libepoxy-dev libgtk-3-dev libspice-server-dev build-essential autoconf automake autotools-dev pkg-config bc curl gawk git bison flex texinfo gperf libtool patchutils mingw-w64 libmpc-dev libmpfr-dev libgmp-dev libexpat-dev libfdt-dev zlib1g-dev libglib2.0-dev libpixman-1-dev libncurses5-dev libncursesw5-dev meson libvirglrenderer-dev libsdl2-dev -y</span><br><span class="line">../configure --target-list=riscv64-softmmu,riscv64-linux-user --prefix=/usr/local/bin/qemu-riscv64 --enable-slirp</span><br><span class="line">make -j$(<span class="built_in">nproc</span>)</span><br><span class="line">sudo make install</span><br></pre></td></tr></table></figure>
+
+<p>上述指令会将 QEMU 安装到 <code>/usr/local/bin/qemu-riscv64</code>。将 <code>/usr/local/bin/qemu-riscv64/bin</code> 添加至 <code>$PATH</code> 即可使用。</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">PATH=<span class="variable">$PATH</span>:/usr/local/bin/qemu-riscv64/bin</span><br></pre></td></tr></table></figure>
+
+<p>检查版本</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">qemu-riscv64 --version</span><br></pre></td></tr></table></figure>
+
+<p>如果看到版本信息则安装成功</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">qemu-riscv64 version 9.1.0</span><br><span class="line">Copyright (c) 2003-2024 Fabrice Bellard and the QEMU Project developers</span><br></pre></td></tr></table></figure>
+
+<p>然后安装</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo apt-get install qemu-user-static</span><br></pre></td></tr></table></figure>
+
+
+
+<h2 id="openEuler-RISC-V-磁盘镜像"><a href="#openEuler-RISC-V-磁盘镜像" class="headerlink" title="openEuler RISC-V 磁盘镜像"></a>openEuler RISC-V 磁盘镜像</h2><h3 id="镜像地址"><a href="#镜像地址" class="headerlink" title="镜像地址"></a>镜像地址</h3><p><a target="_blank" rel="noopener" href="https://repo.openeuler.org/openEuler-24.03-LTS/virtual_machine_img/riscv64/">https://repo.openeuler.org/openEuler-24.03-LTS/virtual_machine_img/riscv64/</a></p>
+<ul>
+<li><strong>标准EFI固件</strong></li>
+</ul>
+<p><code>RISCV_VIRT_CODE.fd</code></p>
+<p><code>RISCV_VIRT_VARS.fd</code></p>
+<blockquote>
+<p>要支持 UEFI，需要 QEMU 版本 8.1 或更高版本。</p>
+</blockquote>
+<ul>
+<li><strong>openEuler-24.03-LTS ISO文件</strong></li>
+</ul>
+<p><code>openEuler-24.03-LTS-riscv64.qcow2.xz</code></p>
+<ul>
+<li><strong>校验文件</strong></li>
+</ul>
+<p><code>openEuler-24.03-LTS-riscv64.qcow2.xz.sha256sum</code></p>
+<ul>
+<li><strong>启动脚本</strong></li>
+</ul>
+<p><code>start_vm.sh</code></p>
+<h3 id="下载"><a href="#下载" class="headerlink" title="下载"></a>下载</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">wget URL (上述文件)</span><br></pre></td></tr></table></figure>
+
+<h3 id="校验文件"><a href="#校验文件" class="headerlink" title="校验文件"></a>校验文件</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">sha256sum</span> -c openEuler-24.03-LTS-riscv64.qcow2.xz.sha256sum</span><br></pre></td></tr></table></figure>
+
+
+
+<h2 id="启动-openEuler-RISC-V-虚拟机"><a href="#启动-openEuler-RISC-V-虚拟机" class="headerlink" title="启动 openEuler RISC-V 虚拟机"></a>启动 openEuler RISC-V 虚拟机</h2><h3 id="启动虚拟机"><a href="#启动虚拟机" class="headerlink" title="启动虚拟机"></a>启动虚拟机</h3><ol>
+<li><p>确认当前目录内包含 EFI 固件，磁盘映像压缩包，以及启动脚本。</p>
+</li>
+<li><p>解压映像压缩包 </p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">xz -dk openEuler-24.03-LTS-riscv64.qcow2.xz</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>调整启动参数</p>
+</li>
+<li><p>执行启动脚本 <code>$ bash start_vm.sh</code></p>
+</li>
+</ol>
+<h3 id="手动安装-libslirp库（可选）"><a href="#手动安装-libslirp库（可选）" class="headerlink" title="手动安装 libslirp库（可选）"></a>手动安装 libslirp库（可选）</h3><p>可能会遇到以下报错</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">qemu-system-riscv64: error while loading shared libraries: libslirp.so.0: cannot open shared object file: No such file or directory</span><br></pre></td></tr></table></figure>
+
+<p>在此情况下需要手动安装<code>libslirp</code>库</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">wget https://gitlab.freedesktop.org/slirp/libslirp/-/archive/v4.7.0/libslirp-v4.7.0.tar.bz2</span><br><span class="line">tar -xjf libslirp-v4.7.0.tar.bz2</span><br><span class="line"><span class="built_in">cd</span> libslirp-v4.7.0</span><br><span class="line"><span class="built_in">mkdir</span> build &amp;&amp; <span class="built_in">cd</span> build</span><br><span class="line">meson setup --prefix=/usr --buildtype=release ..</span><br><span class="line">ninja</span><br><span class="line">sudo ninja install</span><br></pre></td></tr></table></figure>
+
+<h3 id="修改启动脚本（可选）"><a href="#修改启动脚本（可选）" class="headerlink" title="修改启动脚本（可选）"></a>修改启动脚本（可选）</h3><p>可能会收到以下提示</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">qemu-system-riscv64: -drive file=openEuler-24.03-LTS-riscv64.qcow2,format=qcow2,id=hd0: Drive &#x27;hd0&#x27; is already in use because it has been automatically connected to another device (did you need &#x27;if=none&#x27; in the drive options?)</span><br></pre></td></tr></table></figure>
+
+<p>编辑启动脚本</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">nano start_vm.sh</span><br></pre></td></tr></table></figure>
+
+<p>-drive file 修改为</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">-drive file=&quot;$drive&quot;,format=qcow2,if=none,id=hd0</span><br></pre></td></tr></table></figure>
+
+
+
+<h2 id="登录虚拟机"><a href="#登录虚拟机" class="headerlink" title="登录虚拟机"></a>登录虚拟机</h2><p>成功启动后进行登录</p>
+<ul>
+<li>用户名: <code>root</code> </li>
+<li>默认密码: <code>openEuler12#$</code></li>
+</ul>
+</article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta">文章作者: </span><span class="post-copyright-info"><a target="_blank" rel="noopener" href="https://shuomc.github.io">shuomc</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta">文章链接: </span><span class="post-copyright-info"><a href="https://blog.shuomc.cloud/posts/16923974.html">https://blog.shuomc.cloud/posts/16923974.html</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta">版权声明: </span><span class="post-copyright-info">此文章遵循 CC BY-NC-SA 4.0 如有转载，请注明来自原作者</span></div></div><div class="tag_share"><div class="post-meta__tag-list"><a class="post-meta__tags" href="/tags/RISC-V/">RISC-V</a><a class="post-meta__tags" href="/tags/QEMU/">QEMU</a></div><div class="post_share"><div class="social-share" data-image="https://imgbed.yiyunt.cn/img/190" data-sites="wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/butterfly-extsrc/sharejs/dist/css/share.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc/sharejs/dist/js/social-share.min.js" defer></script></div></div><nav class="pagination-post" id="pagination"><div class="next-post pull-full"><a href="/posts/da9b6b33.html"><img class="next-cover" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://picst.sunbangyan.cn/2023/10/07/irass5.png" onerror="onerror=null;src='/img/404.jpg'" alt="cover of next post"><div class="pagination-info"><div class="label">下一篇</div><div class="next_info">操作系统实验二</div></div></a></div></nav><hr/><div id="post-comment"><div class="comment-head"><div class="comment-headline"><i class="fas fa-comments fa-fw"></i><span> 评论</span></div></div><div class="comment-wrap"><div><div id="gitalk-container"></div></div></div></div></div><div class="aside-content" id="aside-content"><div class="card-widget card-info"><div class="is-center"><div class="avatar-img"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://blog.imtop1.moe/wp-content/themes/vsjun.jpg" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info__name">shuomc</div><div class="author-info__description">学习CS中~</div></div><div class="card-info-data site-data is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">15</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">10</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">7</div></a></div><a id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/shuomc"><i class="fab fa-github"></i><span>Follow Me</span></a></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn fa-shake"></i><span>公告</span></div><div class="announcement_content">本站域名已由.cloud 改为.github.io</div></div><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="item-headline"><i class="fas fa-stream"></i><span>目录</span><span class="toc-percentage"></span></div><div class="toc-content"><ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%AE%89%E8%A3%85QEMU"><span class="toc-number">1.</span> <span class="toc-text">安装QEMU</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%B3%BB%E7%BB%9F%E7%8E%AF%E5%A2%83"><span class="toc-number">1.1.</span> <span class="toc-text">系统环境</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%AE%89%E8%A3%85%E6%94%AF%E6%8C%81-RISC-V-%E6%9E%B6%E6%9E%84%E7%9A%84-QEMU-%E6%A8%A1%E6%8B%9F%E5%99%A8"><span class="toc-number">1.2.</span> <span class="toc-text">安装支持 RISC-V 架构的 QEMU 模拟器</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%AE%89%E8%A3%85%E4%B9%8B%E5%89%8D"><span class="toc-number">1.2.1.</span> <span class="toc-text">安装之前</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#Required-additional-packages"><span class="toc-number">1.2.1.1.</span> <span class="toc-text">Required additional packages</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Recommended-additional-packages"><span class="toc-number">1.2.1.2.</span> <span class="toc-text">Recommended additional packages</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%89%8B%E5%8A%A8%E7%BC%96%E8%AF%91%E5%AE%89%E8%A3%85"><span class="toc-number">1.2.2.</span> <span class="toc-text">手动编译安装</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#openEuler-RISC-V-%E7%A3%81%E7%9B%98%E9%95%9C%E5%83%8F"><span class="toc-number">1.3.</span> <span class="toc-text">openEuler RISC-V 磁盘镜像</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%95%9C%E5%83%8F%E5%9C%B0%E5%9D%80"><span class="toc-number">1.3.1.</span> <span class="toc-text">镜像地址</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%B8%8B%E8%BD%BD"><span class="toc-number">1.3.2.</span> <span class="toc-text">下载</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%A0%A1%E9%AA%8C%E6%96%87%E4%BB%B6"><span class="toc-number">1.3.3.</span> <span class="toc-text">校验文件</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%90%AF%E5%8A%A8-openEuler-RISC-V-%E8%99%9A%E6%8B%9F%E6%9C%BA"><span class="toc-number">1.4.</span> <span class="toc-text">启动 openEuler RISC-V 虚拟机</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%90%AF%E5%8A%A8%E8%99%9A%E6%8B%9F%E6%9C%BA"><span class="toc-number">1.4.1.</span> <span class="toc-text">启动虚拟机</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%89%8B%E5%8A%A8%E5%AE%89%E8%A3%85-libslirp%E5%BA%93%EF%BC%88%E5%8F%AF%E9%80%89%EF%BC%89"><span class="toc-number">1.4.2.</span> <span class="toc-text">手动安装 libslirp库（可选）</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%BF%AE%E6%94%B9%E5%90%AF%E5%8A%A8%E8%84%9A%E6%9C%AC%EF%BC%88%E5%8F%AF%E9%80%89%EF%BC%89"><span class="toc-number">1.4.3.</span> <span class="toc-text">修改启动脚本（可选）</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%99%BB%E5%BD%95%E8%99%9A%E6%8B%9F%E6%9C%BA"><span class="toc-number">1.5.</span> <span class="toc-text">登录虚拟机</span></a></li></ol></li></ol></div></div><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>最新文章</span></div><div class="aside-list"><div class="aside-list-item"><a class="thumbnail" href="/posts/16923974.html" title="使用 QEMU 启动 openEuler RISC-V 系统"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://imgbed.yiyunt.cn/img/190" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="使用 QEMU 启动 openEuler RISC-V 系统"/></a><div class="content"><a class="title" href="/posts/16923974.html" title="使用 QEMU 启动 openEuler RISC-V 系统">使用 QEMU 启动 openEuler RISC-V 系统</a><time datetime="2024-09-27T05:50:39.000Z" title="发表于 2024-09-27 13:50:39">2024-09-27</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/posts/da9b6b33.html" title="操作系统实验二"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://picst.sunbangyan.cn/2023/10/07/irass5.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="操作系统实验二"/></a><div class="content"><a class="title" href="/posts/da9b6b33.html" title="操作系统实验二">操作系统实验二</a><time datetime="2023-10-15T13:05:01.000Z" title="发表于 2023-10-15 21:05:01">2023-10-15</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/posts/e11b459a.html" title="操作系统实验一"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://picst.sunbangyan.cn/2023/10/15/e26aa7fcc960aed940bc5e742c6d0ba6.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="操作系统实验一"/></a><div class="content"><a class="title" href="/posts/e11b459a.html" title="操作系统实验一">操作系统实验一</a><time datetime="2023-09-21T04:30:01.000Z" title="发表于 2023-09-21 12:30:01">2023-09-21</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/posts/678c889c.html" title="简单模拟"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://i.imgtg.com/2023/07/03/OxaSYX.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="简单模拟"/></a><div class="content"><a class="title" href="/posts/678c889c.html" title="简单模拟">简单模拟</a><time datetime="2023-07-03T06:15:39.000Z" title="发表于 2023-07-03 14:15:39">2023-07-03</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/posts/2bde0cd6.html" title="2023GPLT L2-1 堆宝塔"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://i.imgtg.com/2023/05/10/wRVYD.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="2023GPLT L2-1 堆宝塔"/></a><div class="content"><a class="title" href="/posts/2bde0cd6.html" title="2023GPLT L2-1 堆宝塔">2023GPLT L2-1 堆宝塔</a><time datetime="2023-05-10T00:50:39.000Z" title="发表于 2023-05-10 08:50:39">2023-05-10</time></div></div></div></div></div></div></main><footer id="footer" style="background-image: url('https://imgbed.yiyunt.cn/img/190')"><div id="footer-wrap"><div class="copyright">&copy;2022 - 2024 By shuomc</div><div class="framework-info"><span>框架 </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo</a><span class="footer-separator">|</span><span>主题 </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly</a></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="阅读模式"><i class="fas fa-book-open"></i></button><button id="darkmode" type="button" title="浅色和深色模式转换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside_config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button class="close" id="mobile-toc-button" type="button" title="目录"><i class="fas fa-list-ul"></i></button><a id="to_comment" href="#post-comment" title="直达评论"><i class="fas fa-comments"></i></a><button id="go-up" type="button" title="回到顶部"><i class="fas fa-arrow-up"></i></button></div></div><div id="local-search"><div class="search-dialog"><nav class="search-nav"><span class="search-dialog-title">搜索</span><span id="loading-status"></span><button class="search-close-button"><i class="fas fa-times"></i></button></nav><div class="is-center" id="loading-database"><i class="fas fa-spinner fa-pulse"></i><span>  数据库加载中</span></div><div class="search-wrap"><div id="local-search-input"><div class="local-search-box"><input class="local-search-box--input" placeholder="搜索文章" type="text"/></div></div><hr/><div id="local-search-results"></div></div></div><div id="search-mask"></div></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.umd.min.js"></script><script src="https://cdn.jsdelivr.net/npm/vanilla-lazyload/dist/lazyload.iife.min.js"></script><script src="/js/search/local-search.js"></script><div class="js-pjax"><script>function addGitalkSource () {
+  const ele = document.createElement('link')
+  ele.rel = 'stylesheet'
+  ele.href= 'https://cdn.jsdelivr.net/npm/gitalk/dist/gitalk.min.css'
+  document.getElementsByTagName('head')[0].appendChild(ele)
+}
+
+function loadGitalk () {
+  function initGitalk () {
+    var gitalk = new Gitalk(Object.assign({
+      clientID: '0603b70810cd1dc9a435',
+      clientSecret: '233f2b1448d5aeec7253832e1059b84414161bb9',
+      repo: 'shuomc.github.io',
+      owner: 'shuomc',
+      admin: ['shuomc'],
+      id: '7bcf727fe9e189ed3d9d7c73266c6ca2',
+      updateCountCallback: commentCount
+    },null))
+
+    gitalk.render('gitalk-container')
+  }
+
+  if (typeof Gitalk === 'function') initGitalk()
+  else {
+    addGitalkSource()
+    getScript('https://cdn.jsdelivr.net/npm/gitalk/dist/gitalk.min.js').then(initGitalk)
+  }
+}
+
+function commentCount(n){
+  let isCommentCount = document.querySelector('#post-meta .gitalk-comment-count')
+  if (isCommentCount) {
+    isCommentCount.innerHTML= n
+  }
+}
+
+if ('Gitalk' === 'Gitalk' || !true) {
+  if (true) btf.loadComment(document.getElementById('gitalk-container'), loadGitalk)
+  else loadGitalk()
+} else {
+  function loadOtherComment () {
+    loadGitalk()
+  }
+}</script></div><div class="aplayer no-destroy" data-id="7676794843" data-server="netease" data-type="playlist"   data-order="list" data-fixed="true" data-preload="auto" data-autoplay="false" data-mutex="true" ></div><canvas class="fireworks" mobile="false"></canvas><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc/dist/fireworks.min.js"></script><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.js"></script><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc/metingjs/dist/Meting.min.js"></script><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div><!-- hexo injector body_end start --><div class="js-pjax"><script async="async">var arr = document.getElementsByClassName('recent-post-item');
+for(var i = 0;i<arr.length;i++){
+    arr[i].classList.add('wow');
+    arr[i].classList.add('animate__zoomIn');
+    arr[i].setAttribute('data-wow-duration', '1.5s');
+    arr[i].setAttribute('data-wow-delay', '200ms');
+    arr[i].setAttribute('data-wow-offset', '30');
+    arr[i].setAttribute('data-wow-iteration', '1');
+  }</script><script async="async">var arr = document.getElementsByClassName('card-widget');
+for(var i = 0;i<arr.length;i++){
+    arr[i].classList.add('wow');
+    arr[i].classList.add('animate__zoomIn');
+    arr[i].setAttribute('data-wow-duration', '');
+    arr[i].setAttribute('data-wow-delay', '200ms');
+    arr[i].setAttribute('data-wow-offset', '');
+    arr[i].setAttribute('data-wow-iteration', '');
+  }</script><script async="async">var arr = document.getElementsByClassName('flink-list-card');
+for(var i = 0;i<arr.length;i++){
+    arr[i].classList.add('wow');
+    arr[i].classList.add('animate__flipInY');
+    arr[i].setAttribute('data-wow-duration', '3s');
+    arr[i].setAttribute('data-wow-delay', '');
+    arr[i].setAttribute('data-wow-offset', '');
+    arr[i].setAttribute('data-wow-iteration', '');
+  }</script><script async="async">var arr = document.getElementsByClassName('flink-list-card');
+for(var i = 0;i<arr.length;i++){
+    arr[i].classList.add('wow');
+    arr[i].classList.add('animate__animated');
+    arr[i].setAttribute('data-wow-duration', '3s');
+    arr[i].setAttribute('data-wow-delay', '');
+    arr[i].setAttribute('data-wow-offset', '');
+    arr[i].setAttribute('data-wow-iteration', '');
+  }</script><script async="async">var arr = document.getElementsByClassName('article-sort-item');
+for(var i = 0;i<arr.length;i++){
+    arr[i].classList.add('wow');
+    arr[i].classList.add('animate__slideInRight');
+    arr[i].setAttribute('data-wow-duration', '1.5s');
+    arr[i].setAttribute('data-wow-delay', '');
+    arr[i].setAttribute('data-wow-offset', '');
+    arr[i].setAttribute('data-wow-iteration', '');
+  }</script><script async="async">var arr = document.getElementsByClassName('site-card');
+for(var i = 0;i<arr.length;i++){
+    arr[i].classList.add('wow');
+    arr[i].classList.add('animate__flipInY');
+    arr[i].setAttribute('data-wow-duration', '3s');
+    arr[i].setAttribute('data-wow-delay', '');
+    arr[i].setAttribute('data-wow-offset', '');
+    arr[i].setAttribute('data-wow-iteration', '');
+  }</script><script async="async">var arr = document.getElementsByClassName('site-card');
+for(var i = 0;i<arr.length;i++){
+    arr[i].classList.add('wow');
+    arr[i].classList.add('animate__animated');
+    arr[i].setAttribute('data-wow-duration', '3s');
+    arr[i].setAttribute('data-wow-delay', '');
+    arr[i].setAttribute('data-wow-offset', '');
+    arr[i].setAttribute('data-wow-iteration', '');
+  }</script></div><script defer src="https://cdn.cbd.int/hexo-butterfly-wowjs/lib/wow.min.js"></script><script defer src="https://cdn.cbd.int/hexo-butterfly-wowjs/lib/wow_init.js"></script><script data-pjax>
+  function butterfly_clock_anzhiyu_injector_config(){
+    var parent_div_git = document.getElementsByClassName('sticky_layout')[0];
+    var item_html = '<div class="card-widget card-clock"><div class="card-glass"><div class="card-background"><div class="card-content"><div id="hexo_electric_clock"><img class="entered loading" id="card-clock-loading" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://cdn.cbd.int/hexo-butterfly-clock-anzhiyu/lib/loading.gif" style="height: 120px; width: 100%;" data-ll-status="loading"/></div></div></div></div></div>';
+    console.log('已挂载butterfly_clock_anzhiyu')
+    if(parent_div_git) {
+      parent_div_git.insertAdjacentHTML("afterbegin",item_html)
+    }
+  }
+  var elist = 'null'.split(',');
+  var cpage = location.pathname;
+  var epage = 'all';
+  var qweather_key = '039ee9dd46514568975730d79f4e4787';
+  var gaud_map_key = 'cc57ac7a038e9e9f48f445a7ad357b5d';
+  var baidu_ak_key = 'undefined';
+  var flag = 0;
+  var clock_rectangle = '101.5646545,25.0393899';
+  var clock_default_rectangle_enable = 'false';
+
+  for (var i=0;i<elist.length;i++){
+    if (cpage.includes(elist[i])){
+      flag++;
+    }
+  }
+
+  if ((epage ==='all')&&(flag == 0)){
+    butterfly_clock_anzhiyu_injector_config();
+  }
+  else if (epage === cpage){
+    butterfly_clock_anzhiyu_injector_config();
+  }
+  </script><script src="https://widget.qweather.net/simple/static/js/he-simple-common.js?v=2.0"></script><script data-pjax src="https://cdn.cbd.int/hexo-butterfly-clock-anzhiyu/lib/clock.min.js"></script><!-- hexo injector body_end end --><script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"tagMode":false,"debug":false,"model":{"jsonPath":"/live2dw/assets/haruto.model.json"},"display":{"position":"right","width":150,"height":300},"mobile":{"show":false},"log":false,"pluginJsPath":"lib/","pluginModelPath":"assets/","pluginRootPath":"live2dw/"});</script></body></html>
