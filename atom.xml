@@ -3,11 +3,11 @@
   <title>shuomc的小站</title>
   
   <subtitle>分享生活, 记录学习</subtitle>
-  <link href="https://blog.shuomc.cloud/atom.xml" rel="self"/>
+  <link href="https://shuomc.github.io/atom.xml" rel="self"/>
   
-  <link href="https://blog.shuomc.cloud/"/>
+  <link href="https://shuomc.github.io/"/>
   <updated>2024-09-27T06:01:14.252Z</updated>
-  <id>https://blog.shuomc.cloud/</id>
+  <id>https://shuomc.github.io/</id>
   
   <author>
     <name>shuomc</name>
@@ -18,8 +18,8 @@
   
   <entry>
     <title>使用 QEMU 启动 openEuler RISC-V 系统</title>
-    <link href="https://blog.shuomc.cloud/posts/16923974.html"/>
-    <id>https://blog.shuomc.cloud/posts/16923974.html</id>
+    <link href="https://shuomc.github.io/posts/16923974.html"/>
+    <id>https://shuomc.github.io/posts/16923974.html</id>
     <published>2024-09-27T05:50:39.000Z</published>
     <updated>2024-09-27T06:01:14.252Z</updated>
     
@@ -36,19 +36,19 @@
     
     
     
-    <category term="RISC-V" scheme="https://blog.shuomc.cloud/categories/RISC-V/"/>
+    <category term="RISC-V" scheme="https://shuomc.github.io/categories/RISC-V/"/>
     
     
-    <category term="RISC-V" scheme="https://blog.shuomc.cloud/tags/RISC-V/"/>
+    <category term="RISC-V" scheme="https://shuomc.github.io/tags/RISC-V/"/>
     
-    <category term="QEMU" scheme="https://blog.shuomc.cloud/tags/QEMU/"/>
+    <category term="QEMU" scheme="https://shuomc.github.io/tags/QEMU/"/>
     
   </entry>
   
   <entry>
     <title>操作系统实验二</title>
-    <link href="https://blog.shuomc.cloud/posts/da9b6b33.html"/>
-    <id>https://blog.shuomc.cloud/posts/da9b6b33.html</id>
+    <link href="https://shuomc.github.io/posts/da9b6b33.html"/>
+    <id>https://shuomc.github.io/posts/da9b6b33.html</id>
     <published>2023-10-15T13:05:01.000Z</published>
     <updated>2023-10-15T13:07:58.000Z</updated>
     
@@ -62,21 +62,21 @@
     
     
     
-    <category term="操作系统" scheme="https://blog.shuomc.cloud/categories/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/"/>
+    <category term="操作系统" scheme="https://shuomc.github.io/categories/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/"/>
     
     
-    <category term="C/C++" scheme="https://blog.shuomc.cloud/tags/C-C/"/>
+    <category term="C/C++" scheme="https://shuomc.github.io/tags/C-C/"/>
     
-    <category term="操作系统" scheme="https://blog.shuomc.cloud/tags/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/"/>
+    <category term="操作系统" scheme="https://shuomc.github.io/tags/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/"/>
     
-    <category term="uOS-II" scheme="https://blog.shuomc.cloud/tags/uOS-II/"/>
+    <category term="uOS-II" scheme="https://shuomc.github.io/tags/uOS-II/"/>
     
   </entry>
   
   <entry>
     <title>操作系统实验一</title>
-    <link href="https://blog.shuomc.cloud/posts/e11b459a.html"/>
-    <id>https://blog.shuomc.cloud/posts/e11b459a.html</id>
+    <link href="https://shuomc.github.io/posts/e11b459a.html"/>
+    <id>https://shuomc.github.io/posts/e11b459a.html</id>
     <published>2023-09-21T04:30:01.000Z</published>
     <updated>2024-09-27T06:00:31.144Z</updated>
     
@@ -90,21 +90,21 @@
     
     
     
-    <category term="操作系统" scheme="https://blog.shuomc.cloud/categories/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/"/>
+    <category term="操作系统" scheme="https://shuomc.github.io/categories/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/"/>
     
     
-    <category term="C/C++" scheme="https://blog.shuomc.cloud/tags/C-C/"/>
+    <category term="C/C++" scheme="https://shuomc.github.io/tags/C-C/"/>
     
-    <category term="操作系统" scheme="https://blog.shuomc.cloud/tags/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/"/>
+    <category term="操作系统" scheme="https://shuomc.github.io/tags/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/"/>
     
-    <category term="uOS-II" scheme="https://blog.shuomc.cloud/tags/uOS-II/"/>
+    <category term="uOS-II" scheme="https://shuomc.github.io/tags/uOS-II/"/>
     
   </entry>
   
   <entry>
     <title>简单模拟</title>
-    <link href="https://blog.shuomc.cloud/posts/678c889c.html"/>
-    <id>https://blog.shuomc.cloud/posts/678c889c.html</id>
+    <link href="https://shuomc.github.io/posts/678c889c.html"/>
+    <id>https://shuomc.github.io/posts/678c889c.html</id>
     <published>2023-07-03T06:15:39.000Z</published>
     <updated>2023-07-03T06:20:58.000Z</updated>
     
@@ -119,17 +119,17 @@
     
     
     
-    <category term="算法" scheme="https://blog.shuomc.cloud/categories/%E7%AE%97%E6%B3%95/"/>
+    <category term="算法" scheme="https://shuomc.github.io/categories/%E7%AE%97%E6%B3%95/"/>
     
     
-    <category term="C/C++" scheme="https://blog.shuomc.cloud/tags/C-C/"/>
+    <category term="C/C++" scheme="https://shuomc.github.io/tags/C-C/"/>
     
   </entry>
   
   <entry>
     <title>2023GPLT L2-1 堆宝塔</title>
-    <link href="https://blog.shuomc.cloud/posts/2bde0cd6.html"/>
-    <id>https://blog.shuomc.cloud/posts/2bde0cd6.html</id>
+    <link href="https://shuomc.github.io/posts/2bde0cd6.html"/>
+    <id>https://shuomc.github.io/posts/2bde0cd6.html</id>
     <published>2023-05-10T00:50:39.000Z</published>
     <updated>2023-05-10T00:49:26.000Z</updated>
     
@@ -143,17 +143,17 @@
     
     
     
-    <category term="算法" scheme="https://blog.shuomc.cloud/categories/%E7%AE%97%E6%B3%95/"/>
+    <category term="算法" scheme="https://shuomc.github.io/categories/%E7%AE%97%E6%B3%95/"/>
     
     
-    <category term="C/C++" scheme="https://blog.shuomc.cloud/tags/C-C/"/>
+    <category term="C/C++" scheme="https://shuomc.github.io/tags/C-C/"/>
     
   </entry>
   
   <entry>
     <title>2023GPLT L1题解 Pt.2</title>
-    <link href="https://blog.shuomc.cloud/posts/734676d4.html"/>
-    <id>https://blog.shuomc.cloud/posts/734676d4.html</id>
+    <link href="https://shuomc.github.io/posts/734676d4.html"/>
+    <id>https://shuomc.github.io/posts/734676d4.html</id>
     <published>2023-05-06T01:28:39.000Z</published>
     <updated>2023-05-06T01:27:46.000Z</updated>
     
@@ -167,17 +167,17 @@
     
     
     
-    <category term="算法" scheme="https://blog.shuomc.cloud/categories/%E7%AE%97%E6%B3%95/"/>
+    <category term="算法" scheme="https://shuomc.github.io/categories/%E7%AE%97%E6%B3%95/"/>
     
     
-    <category term="C/C++" scheme="https://blog.shuomc.cloud/tags/C-C/"/>
+    <category term="C/C++" scheme="https://shuomc.github.io/tags/C-C/"/>
     
   </entry>
   
   <entry>
     <title>2023GPLT L1题解 Pt.1</title>
-    <link href="https://blog.shuomc.cloud/posts/ea4f276e.html"/>
-    <id>https://blog.shuomc.cloud/posts/ea4f276e.html</id>
+    <link href="https://shuomc.github.io/posts/ea4f276e.html"/>
+    <id>https://shuomc.github.io/posts/ea4f276e.html</id>
     <published>2023-04-25T08:15:39.000Z</published>
     <updated>2023-05-06T01:24:58.000Z</updated>
     
@@ -192,17 +192,17 @@
     
     
     
-    <category term="算法" scheme="https://blog.shuomc.cloud/categories/%E7%AE%97%E6%B3%95/"/>
+    <category term="算法" scheme="https://shuomc.github.io/categories/%E7%AE%97%E6%B3%95/"/>
     
     
-    <category term="C/C++" scheme="https://blog.shuomc.cloud/tags/C-C/"/>
+    <category term="C/C++" scheme="https://shuomc.github.io/tags/C-C/"/>
     
   </entry>
   
   <entry>
     <title>将网站收录到bing和Google 添加sitemap</title>
-    <link href="https://blog.shuomc.cloud/posts/15f61212.html"/>
-    <id>https://blog.shuomc.cloud/posts/15f61212.html</id>
+    <link href="https://shuomc.github.io/posts/15f61212.html"/>
+    <id>https://shuomc.github.io/posts/15f61212.html</id>
     <published>2023-03-18T02:40:39.000Z</published>
     <updated>2023-03-18T02:40:58.000Z</updated>
     
@@ -218,17 +218,17 @@
     
     
     
-    <category term="Hexo" scheme="https://blog.shuomc.cloud/categories/Hexo/"/>
+    <category term="Hexo" scheme="https://shuomc.github.io/categories/Hexo/"/>
     
     
-    <category term="博客搭建" scheme="https://blog.shuomc.cloud/tags/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/"/>
+    <category term="博客搭建" scheme="https://shuomc.github.io/tags/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/"/>
     
   </entry>
   
   <entry>
     <title>双链表及基本操作( 类 )</title>
-    <link href="https://blog.shuomc.cloud/posts/2d53b15f.html"/>
-    <id>https://blog.shuomc.cloud/posts/2d53b15f.html</id>
+    <link href="https://shuomc.github.io/posts/2d53b15f.html"/>
+    <id>https://shuomc.github.io/posts/2d53b15f.html</id>
     <published>2023-03-17T02:35:39.000Z</published>
     <updated>2023-09-05T08:37:56.000Z</updated>
     
@@ -242,19 +242,19 @@
     
     
     
-    <category term="数据结构" scheme="https://blog.shuomc.cloud/categories/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/"/>
+    <category term="数据结构" scheme="https://shuomc.github.io/categories/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/"/>
     
     
-    <category term="C/C++" scheme="https://blog.shuomc.cloud/tags/C-C/"/>
+    <category term="C/C++" scheme="https://shuomc.github.io/tags/C-C/"/>
     
-    <category term="数据结构" scheme="https://blog.shuomc.cloud/tags/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/"/>
+    <category term="数据结构" scheme="https://shuomc.github.io/tags/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/"/>
     
   </entry>
   
   <entry>
     <title>指针的简单使用</title>
-    <link href="https://blog.shuomc.cloud/posts/94087718.html"/>
-    <id>https://blog.shuomc.cloud/posts/94087718.html</id>
+    <link href="https://shuomc.github.io/posts/94087718.html"/>
+    <id>https://shuomc.github.io/posts/94087718.html</id>
     <published>2023-02-25T03:30:15.000Z</published>
     <updated>2023-05-06T01:25:28.000Z</updated>
     
@@ -269,19 +269,19 @@
     
     
     
-    <category term="指针" scheme="https://blog.shuomc.cloud/categories/%E6%8C%87%E9%92%88/"/>
+    <category term="指针" scheme="https://shuomc.github.io/categories/%E6%8C%87%E9%92%88/"/>
     
     
-    <category term="C/C++" scheme="https://blog.shuomc.cloud/tags/C-C/"/>
+    <category term="C/C++" scheme="https://shuomc.github.io/tags/C-C/"/>
     
-    <category term="指针" scheme="https://blog.shuomc.cloud/tags/%E6%8C%87%E9%92%88/"/>
+    <category term="指针" scheme="https://shuomc.github.io/tags/%E6%8C%87%E9%92%88/"/>
     
   </entry>
   
   <entry>
     <title>BFS简单入门</title>
-    <link href="https://blog.shuomc.cloud/posts/c1fdd123.html"/>
-    <id>https://blog.shuomc.cloud/posts/c1fdd123.html</id>
+    <link href="https://shuomc.github.io/posts/c1fdd123.html"/>
+    <id>https://shuomc.github.io/posts/c1fdd123.html</id>
     <published>2023-02-24T05:35:39.000Z</published>
     <updated>2023-05-06T01:24:48.000Z</updated>
     
@@ -298,19 +298,19 @@
     
     
     
-    <category term="数据结构" scheme="https://blog.shuomc.cloud/categories/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/"/>
+    <category term="数据结构" scheme="https://shuomc.github.io/categories/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/"/>
     
     
-    <category term="C/C++" scheme="https://blog.shuomc.cloud/tags/C-C/"/>
+    <category term="C/C++" scheme="https://shuomc.github.io/tags/C-C/"/>
     
-    <category term="数据结构" scheme="https://blog.shuomc.cloud/tags/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/"/>
+    <category term="数据结构" scheme="https://shuomc.github.io/tags/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/"/>
     
   </entry>
   
   <entry>
     <title>关于字符串的定义、函数和输入</title>
-    <link href="https://blog.shuomc.cloud/posts/83f97962.html"/>
-    <id>https://blog.shuomc.cloud/posts/83f97962.html</id>
+    <link href="https://shuomc.github.io/posts/83f97962.html"/>
+    <id>https://shuomc.github.io/posts/83f97962.html</id>
     <published>2022-11-11T13:00:39.000Z</published>
     <updated>2023-05-06T01:25:40.000Z</updated>
     
@@ -328,19 +328,19 @@
     
     
     
-    <category term="字符串" scheme="https://blog.shuomc.cloud/categories/%E5%AD%97%E7%AC%A6%E4%B8%B2/"/>
+    <category term="字符串" scheme="https://shuomc.github.io/categories/%E5%AD%97%E7%AC%A6%E4%B8%B2/"/>
     
     
-    <category term="C/C++" scheme="https://blog.shuomc.cloud/tags/C-C/"/>
+    <category term="C/C++" scheme="https://shuomc.github.io/tags/C-C/"/>
     
-    <category term="字符串" scheme="https://blog.shuomc.cloud/tags/%E5%AD%97%E7%AC%A6%E4%B8%B2/"/>
+    <category term="字符串" scheme="https://shuomc.github.io/tags/%E5%AD%97%E7%AC%A6%E4%B8%B2/"/>
     
   </entry>
   
   <entry>
     <title>求最小公倍数和最大公约数</title>
-    <link href="https://blog.shuomc.cloud/posts/9861f9d2.html"/>
-    <id>https://blog.shuomc.cloud/posts/9861f9d2.html</id>
+    <link href="https://shuomc.github.io/posts/9861f9d2.html"/>
+    <id>https://shuomc.github.io/posts/9861f9d2.html</id>
     <published>2022-10-14T14:37:39.000Z</published>
     <updated>2023-05-06T01:25:48.000Z</updated>
     
@@ -354,17 +354,17 @@
     
     
     
-    <category term="算法" scheme="https://blog.shuomc.cloud/categories/%E7%AE%97%E6%B3%95/"/>
+    <category term="算法" scheme="https://shuomc.github.io/categories/%E7%AE%97%E6%B3%95/"/>
     
     
-    <category term="C/C++" scheme="https://blog.shuomc.cloud/tags/C-C/"/>
+    <category term="C/C++" scheme="https://shuomc.github.io/tags/C-C/"/>
     
   </entry>
   
   <entry>
     <title>社团迎新题</title>
-    <link href="https://blog.shuomc.cloud/posts/dc6681d8.html"/>
-    <id>https://blog.shuomc.cloud/posts/dc6681d8.html</id>
+    <link href="https://shuomc.github.io/posts/dc6681d8.html"/>
+    <id>https://shuomc.github.io/posts/dc6681d8.html</id>
     <published>2022-10-10T08:00:39.000Z</published>
     <updated>2023-05-06T01:24:38.000Z</updated>
     
@@ -379,17 +379,17 @@
     
     
     
-    <category term="算法" scheme="https://blog.shuomc.cloud/categories/%E7%AE%97%E6%B3%95/"/>
+    <category term="算法" scheme="https://shuomc.github.io/categories/%E7%AE%97%E6%B3%95/"/>
     
     
-    <category term="C/C++" scheme="https://blog.shuomc.cloud/tags/C-C/"/>
+    <category term="C/C++" scheme="https://shuomc.github.io/tags/C-C/"/>
     
   </entry>
   
   <entry>
     <title>使用hexo和github搭建个人博客</title>
-    <link href="https://blog.shuomc.cloud/posts/fbbf84ee.html"/>
-    <id>https://blog.shuomc.cloud/posts/fbbf84ee.html</id>
+    <link href="https://shuomc.github.io/posts/fbbf84ee.html"/>
+    <id>https://shuomc.github.io/posts/fbbf84ee.html</id>
     <published>2022-10-08T05:14:27.000Z</published>
     <updated>2022-10-10T01:27:26.000Z</updated>
     
@@ -403,12 +403,12 @@
     
     
     
-    <category term="Hexo" scheme="https://blog.shuomc.cloud/categories/Hexo/"/>
+    <category term="Hexo" scheme="https://shuomc.github.io/categories/Hexo/"/>
     
     
-    <category term="Hexo" scheme="https://blog.shuomc.cloud/tags/Hexo/"/>
+    <category term="Hexo" scheme="https://shuomc.github.io/tags/Hexo/"/>
     
-    <category term="博客搭建" scheme="https://blog.shuomc.cloud/tags/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/"/>
+    <category term="博客搭建" scheme="https://shuomc.github.io/tags/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/"/>
     
   </entry>
   

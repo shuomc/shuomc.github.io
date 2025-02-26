@@ -402,11 +402,33 @@
     
     
     <entry>
+      <title>分类</title>
+      <link href="/categories/index.html"/>
+      <url>/categories/index.html</url>
+      
+        <content type="html"><![CDATA[]]></content>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>关于我</title>
       <link href="/about/index.html"/>
       <url>/about/index.html</url>
       
         <content type="html"><![CDATA[<h1 id="你好！我叫shuomc"><a href="#你好！我叫shuomc" class="headerlink" title="你好！我叫shuomc"></a>你好！我叫shuomc</h1><p><del>也可以叫我vsjun</del></p><p>目前为大三学生，热爱计算机，也喜欢编程，这个网站是我自学hexo搭建、美化并且加装了一系列插件完成的，后续还会跟进网站的拓展以及建设。</p><h2 id="建立目的"><a href="#建立目的" class="headerlink" title="建立目的"></a>建立目的</h2><p> 小站的建立是为了能更好地学习计算机相关内容 ( 云笔记 ) ，<del>也想勾搭一些大佬</del>。本人在大学前并没有接触过编程，但一直有浓厚的兴趣，目前为C语言初学者。小站将会更新C语言学习、网站搭建相关的文章以及其它干货经验分享。</p><h2 id="未来"><a href="#未来" class="headerlink" title="未来"></a>未来</h2><p> 其实我挺喜欢游戏开发，不过我可能做不了技术美术的活，<del>希望能成为优秀的游戏程序员</del></p><p> <strong><del>目标加入UBISOFT</del></strong></p><p><em>( 2023.3.18更新 )</em></p><p>突然想学Python了，AI真是时代浪潮，看起来我还要把数据结构和算法理解透</p><p>要不要走游戏开发的道路，我会慎重考虑</p><p><strong>Artwork or Artificial</strong></p><p>这是个问题</p><p>当然，后者的门槛较高</p><p><em>( 2025.2.16更新 )</em><br>最终还是成为了javaWeb的样子（悲</p><h2 id="联系我"><a href="#联系我" class="headerlink" title="联系我"></a>联系我</h2><p><strong>QQ：1164659757</strong></p><p><strong>微信：Hephaestus626</strong></p><p><strong>github：<a href="https://github.com/shuomc">https://github.com/shuomc</a></strong></p><h2 id="本站链接"><a href="#本站链接" class="headerlink" title="本站链接"></a>本站链接</h2><blockquote><p><strong><a href="https://si.shuomc.buzz/">shuomc的博客 - 分享生活, 记录学习</a></strong></p></blockquote><p>如果你觉得我的文章不错，可以分享给身边的朋友，也希望有大佬能指出我的不足，欢迎交换友链！！！</p>]]></content>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>随便逛逛</title>
+      <link href="/link/index.html"/>
+      <url>/link/index.html</url>
+      
+        <content type="html"><![CDATA[]]></content>
       
     </entry>
     
@@ -435,31 +457,9 @@
     
     
     <entry>
-      <title>分类</title>
-      <link href="/categories/index.html"/>
-      <url>/categories/index.html</url>
-      
-        <content type="html"><![CDATA[]]></content>
-      
-    </entry>
-    
-    
-    
-    <entry>
       <title>朋友们</title>
       <link href="/friends/index.html"/>
       <url>/friends/index.html</url>
-      
-        <content type="html"><![CDATA[]]></content>
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title>随便逛逛</title>
-      <link href="/link/index.html"/>
-      <url>/link/index.html</url>
       
         <content type="html"><![CDATA[]]></content>
       
